@@ -99,6 +99,30 @@ class issueLogController extends apiController
         if ($this->_input['shipping_country']) {
             $where[] = "(auction_par_varchar.value = '" . $this->_input['shipping_country'] . "' OR apv_rma.value = '" . $this->_input['shipping_country'] . "')";
         }
+        if ($this->_input['by_comment']) {
+            $comment = preg_replace('/\s+/', ' ', $this->_dbr->escape($this->_input['by_comment']));
+            /*
+            REGEXP_REPLACE(table.field, '\\s+', ' ') поддерживается только в MySQL 8, а текущая БД MySQL 5.6.
+            Приходится использовать жуткий костыль из вложенных REPLACE(), который не гарантируют, что в строке не будет пробелов подряд больше 1.
+            */
+            $where[] = '(
+               REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(issuelog.issue, \'\n\', \' \'), \'\r\', \' \'), \'\t\', \' \'), \'   \', \' \'), \'  \', \' \') LIKE \'%' . $comment . '%\'
+               OR EXISTS (
+                  SELECT 1
+                     FROM `comments`
+                  WHERE comments.obj_id = issuelog.id
+                     AND LOWER(comments.obj) LIKE \'%issuelog%\'
+                     AND REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(comments.content, \'\n\', \' \'), \'\r\', \' \'), \'\t\', \' \'), \'   \', \' \'), \'  \', \' \') LIKE \'%' . $comment . '%\'
+               )
+               OR EXISTS (
+                  SELECT 1
+                     FROM `alarms`
+                  WHERE alarms.type_id = issuelog.id
+                     AND alarms.type = \'issuelog\'
+                     AND alarms.comment LIKE \'%' . $comment . '%\'
+               )
+            )';
+        }
 
         $this->_result['issue_list'] = $this->_dbr->getAll("            
             SELECT 
