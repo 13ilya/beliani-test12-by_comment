@@ -1,0 +1,17 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.Fly extends mx.transitions.Transition
+{
+   public function Fly(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private function _render(p:Number):Void;
+   private var _stagePoints:Object;
+   private var _startPoint:Number;
+   private var _xFinal:Number;
+   private var _xInitial:Number;
+   private var _yFinal:Number;
+   private var _yInitial:Number;
+   public var className:String;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public var type:Object;
+};

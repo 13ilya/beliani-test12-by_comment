@@ -1,0 +1,83 @@
+import mx.core.UIObject;
+import mx.skins.RectBorder;
+import mx.core.UIComponent;
+
+[Event("change")] 
+[Event("enter")] 
+[TagName("TextInput")] 
+[IconFile("TextInput.png")] 
+[DataBindingInfo("editEvents","&quot;focusIn;focusOut&quot;")] 
+intrinsic class mx.controls.TextInput extends mx.core.UIComponent
+{
+   public function TextInput();
+   public var __editable:Boolean;
+   public var __get___accProps:Function;
+   public var __get__editable:Function;
+   public var __get__hPosition:Function;
+   public var __get__html:Function;
+   public var __get__maxChars:Function;
+   public var __get__password:Function;
+   public var __get__restrict:Function;
+   public var __get__tabIndex:Function;
+   public var __get__text:Function;
+   function set _accProps(val:Object);
+   function get _accProps():Object;
+   public var _maxWidth:Number;
+   public function addEnterEvents():Void;
+   public function addEventListener(event:String, handler):Void;
+   public var bind:Boolean;
+   public var borderStyle:String;
+   public var border_mc:mx.skins.RectBorder;
+   public var changeHandler:Function;
+   public var className:String;
+   public var clipParameters:Object;
+   public function createChildren(Void):Void;
+   public function draw(Void):Void;
+   [Inspectable(defaultValue=true)] function get editable():Boolean;
+   function set editable(w:Boolean):Void;
+   public var enterHandler:Function;
+   public var enterListener:Object;
+   public function enterOnKeyDown():Void;
+   public function getHtml():Boolean;
+   public function getText():String;
+   function get hPosition():Number;
+   function set hPosition(w:Number):Void;
+   function get html():Boolean;
+   function set html(value:Boolean):Void;
+   public function init(Void):Void;
+   public var initText:String;
+   public var initializing:Boolean;
+   public var label:TextField;
+   function get length():Number;
+   [Inspectable(defaultValue=null, verbose=1, category="Limits")] function get maxChars():Number;
+   function set maxChars(w:Number):Void;
+   function get maxHPosition():Number;
+   static var mergedClipParameters:Boolean;
+   public function onKillFocus(newFocus:Object):Void;
+   public function onLabelChanged(Void):Void;
+   public function onSetFocus(oldFocus:Object):Void;
+   public var owner:MovieClip;
+   [Inspectable(defaultValue=false)] function get password():Boolean;
+   function set password(w:Boolean):Void;
+   [Inspectable(defaultValue="", verbose=1, category="Limits")] function get restrict():String;
+   function set restrict(w:String):Void;
+   public function setColor(col:Number):Void;
+   public function setEditable(s:Boolean):Void;
+   public function setEnabled(enable:Boolean):Void;
+   public function setFocus():Void;
+   public function setHtml(value:Boolean):Void;
+   public function setText(t:String):Void;
+   public function size(Void):Void;
+   static var symbolName:String;
+   static var symbolOwner:Object;
+   function get tabIndex():Number;
+   function set tabIndex(w:Number):Void;
+   [Inspectable(defaultValue="")] [Bindable] [ChangeEvent("focusOut","enter")] function get text():String;
+   function set text(t:String):Void;
+   public var tfh:Number;
+   public var tfw:Number;
+   public var tfx:Number;
+   public var tfy:Number;
+   public var updateModel:Function;
+   static var version:String;
+};

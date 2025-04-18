@@ -1,0 +1,13 @@
+15 3 * * * cd /home/dev/public_html_heap/App/shells; sh refresh_heap_branch.sh
+0 0 * * * /usr/bin/curl http://prolodev.prologistics.info/total_log_index.php
+0 * * * * /usr/bin/curl http://prolodev.prologistics.info/timestamp_relogin_cron.php
+* * * * * /usr/bin/curl http://prolodev.prologistics.info/timestamp_cron.php
+*/10 * * * * /usr/bin/curl http://prolodev.prologistics.info/cron_resend_email.php
+* * * * * /usr/bin/curl http://prolodev.prologistics.info/ware_statistics_cron.php
+0 * * * * php /home/dev/public_html_dev/console.php api:beslist:put
+
+*/15 * * * * php /home/dev/public_html_dev/console.php cron:redis
+#*/15 * * * * php /home/dev/public_html_dev/console.php cron:spider
+
+
+

@@ -1,0 +1,5 @@
+
+intrinsic class mx.styles.CSSTextStyles
+{
+   static function addTextStyles(o:Object, bColor:Boolean):Void;
+};

@@ -1,0 +1,23 @@
+import mx.core.ext.UIObjectExtensions;
+import mx.skins.Border;
+import mx.styles.CSSStyleDeclaration;
+
+intrinsic class mx.skins.halo.RectBorder extends mx.skins.RectBorder
+{
+   public function RectBorder();
+   static var UIObjectExtensionsDependency;
+   public var borderCapColorName:String;
+   private var borderWidths:Object;
+   static function classConstruct():Boolean;
+   static var classConstructed:Boolean;
+   private var colorList:Object;
+   public function draw3dBorder(c1:Number, c2:Number, c3:Number, c4:Number, c5:Number, c6:Number):Void;
+   public function drawBorder(Void):Void;
+   public var drawRoundRect:Function;
+   public function getBorderMetrics(Void):Object;
+   public function init(Void):Void;
+   public var shadowCapColorName:String;
+   static var symbolName:String;
+   static var symbolOwner:Object;
+   static var version:String;
+};

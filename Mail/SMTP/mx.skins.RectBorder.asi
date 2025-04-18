@@ -1,0 +1,28 @@
+import mx.skins.Border;
+import mx.styles.CSSStyleDeclaration;
+
+intrinsic class mx.skins.RectBorder extends mx.skins.Border
+{
+   public function RectBorder();
+   public var __borderMetrics:Object;
+   public var backgroundColorName:String;
+   public var borderColorName:String;
+   function get borderMetrics():Object;
+   public var borderStyleName:String;
+   public var buttonColorName:String;
+   public var className:String;
+   public function draw(Void):Void;
+   public function drawBorder(Void):Void;
+   public function getBorderMetrics(Void):Object;
+   function get height():Number;
+   public var highlightColorName:String;
+   public function init(Void):Void;
+   public var offset:Number;
+   public function setColor(Void):Void;
+   public var shadowColorName:String;
+   public function size(Void):Void;
+   static var symbolName:String;
+   static var symbolOwner:Object;
+   static var version:String;
+   function get width():Number;
+};

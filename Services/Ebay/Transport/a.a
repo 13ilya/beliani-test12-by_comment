@@ -1,0 +1,1952 @@
+Array
+(
+    [Item] => Array
+        (
+            [0] => Array
+                (
+                    [BidCount] => 0
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-14 08:08:52
+                    [StartTime] => 2004-06-09 08:08:52
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 300.00
+                    [QuantitySold] => 0
+                    [PictureURL] => 
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 0
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteOnly
+                    [AutoPay] => 0
+                    [BidIncrement] => 1.00
+                    [Country] => de
+                    [MinimumToBid] => 300.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 76
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 34409
+                            [CategoryFullName] => Antiquitäten & Kunst:Alte Weine & Spirituosen:Weißweine
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 366.54
+                    [ConvertedBuyItNowPrice] => 0.00
+                    [BuyItNowPrice] => 0.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => fg fg fgdgsd gewr w ere rtet er ter 
+rty ry rtyh ftythg rthtyhffh t tyu yt u
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929501
+                    [Location] => ddddddddddd
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 3
+                            [Seconds] => 8
+                            [Hours] => 17
+                            [Minutes] => 26
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 0
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 0
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 1
+                            [SeeDescription] => 0
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 0
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [BidCount] => 0
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-14 08:08:52
+                    [StartTime] => 2004-06-09 08:08:52
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 300.00
+                    [QuantitySold] => 0
+                    [PictureURL] => 
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 0
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteOnly
+                    [AutoPay] => 0
+                    [BidIncrement] => 1.00
+                    [Country] => de
+                    [MinimumToBid] => 300.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 76
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 34409
+                            [CategoryFullName] => Antiquitäten & Kunst:Alte Weine & Spirituosen:Weißweine
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 366.54
+                    [ConvertedBuyItNowPrice] => 0.00
+                    [BuyItNowPrice] => 0.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => fg fg fgdgsd gewr w ere rtet er ter 
+rty ry rtyh ftythg rthtyhffh t tyu yt u
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929502
+                    [Location] => ddddddddddd
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 3
+                            [Seconds] => 8
+                            [Hours] => 17
+                            [Minutes] => 26
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 0
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 0
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 1
+                            [SeeDescription] => 0
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 0
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [BidCount] => 0
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-14 08:09:40
+                    [StartTime] => 2004-06-09 08:09:40
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 300.00
+                    [QuantitySold] => 0
+                    [PictureURL] => 
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 0
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteOnly
+                    [AutoPay] => 0
+                    [BidIncrement] => 1.00
+                    [Country] => de
+                    [MinimumToBid] => 300.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 76
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 34409
+                            [CategoryFullName] => Antiquitäten & Kunst:Alte Weine & Spirituosen:Weißweine
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 366.54
+                    [ConvertedBuyItNowPrice] => 0.00
+                    [BuyItNowPrice] => 0.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => fg fg fgdgsd gewr w ere rtet er ter 
+rty ry rtyh ftythg rthtyhffh t tyu yt u
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929503
+                    [Location] => ddddddddddd
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 3
+                            [Seconds] => 56
+                            [Hours] => 17
+                            [Minutes] => 26
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 0
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 0
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 1
+                            [SeeDescription] => 0
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 0
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [BidCount] => 0
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-14 08:10:17
+                    [StartTime] => 2004-06-09 08:10:17
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 300.00
+                    [QuantitySold] => 0
+                    [PictureURL] => 
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 0
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteOnly
+                    [AutoPay] => 0
+                    [BidIncrement] => 1.00
+                    [Country] => de
+                    [MinimumToBid] => 300.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 76
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 34409
+                            [CategoryFullName] => Antiquitäten & Kunst:Alte Weine & Spirituosen:Weißweine
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 366.54
+                    [ConvertedBuyItNowPrice] => 0.00
+                    [BuyItNowPrice] => 0.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => fg fg fgdgsd gewr w ere rtet er ter 
+rty ry rtyh ftythg rthtyhffh t tyu yt u
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929504
+                    [Location] => ddddddddddd
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 3
+                            [Seconds] => 33
+                            [Hours] => 17
+                            [Minutes] => 27
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 1
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 1
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 1
+                            [SeeDescription] => 0
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 0
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [BidCount] => 0
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-19 08:31:55
+                    [StartTime] => 2004-06-09 08:31:55
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 555.00
+                    [QuantitySold] => 0
+                    [PictureURL] => 
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 0
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteOnly
+                    [AutoPay] => 0
+                    [BidIncrement] => 5.00
+                    [Country] => de
+                    [MinimumToBid] => 555.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 76
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 34409
+                            [CategoryFullName] => Antiquitäten & Kunst:Alte Weine & Spirituosen:Weißweine
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 678.10
+                    [ConvertedBuyItNowPrice] => 0.00
+                    [BuyItNowPrice] => 0.00
+                    [StartPrice] => 555.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 678.10
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => fg fg fgdgsd gewr w ere rtet er ter 
+rty ry rtyh ftythg rthtyhffh t tyu yt u
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929507
+                    [Location] => ddddddddddd
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 8
+                            [Seconds] => 11
+                            [Hours] => 17
+                            [Minutes] => 49
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 1
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 1
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 1
+                            [SeeDescription] => 0
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 0
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [BidCount] => 0
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-14 15:57:55
+                    [StartTime] => 2004-06-09 15:57:55
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 300.00
+                    [QuantitySold] => 0
+                    [PictureURL] => http://www.teakparadies.com/tisch_eckig/tisch_eckig_640x480.jpg
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 1
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteAndRegions
+                    [AutoPay] => 0
+                    [BidIncrement] => 1.00
+                    [Country] => ch
+                    [MinimumToBid] => 300.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 480
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 25865
+                            [CategoryFullName] => Heimwerker & Garten:Garten:Möbel:Tische
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 366.54
+                    [ConvertedBuyItNowPrice] => 0.00
+                    [BuyItNowPrice] => 0.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => *** 9 Teilige-Teak-Garnitur mit Tisch - Stühle nach Wahl ***
+<br>
+ <br>
+<br>
+ <br>
+<br>
+Hier läßt sich der Feierabend genießen und zusammen mit Freunden feiern.
+<br>
+ <br>
+<br>
+Eine traumhaft elegante Garnitur auf die man Sie anspricht. Eine vernünftige Investition, die man nur 1 mal tätigt, denn bei dieser Verarbeitung halten diese Möbel ein Leben lang. Dem enorm stabilen Holz kann so leicht nichts anhaben. Regen - Sonne - Kälte ist kein Problem und das bei minimaler Pflege.
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929768
+                    [Location] => Deutschland /Stuttgart
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 4
+                            [Seconds] => 11
+                            [Hours] => 1
+                            [Minutes] => 15
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 0
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 0
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 0
+                            [SeeDescription] => 1
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 1
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [BidCount] => 1
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-09 16:01:53
+                    [StartTime] => 2004-06-09 16:00:54
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 800.00
+                    [QuantitySold] => 1
+                    [PictureURL] => http://www.teakparadies.com/tisch_eckig/tisch_eckig_640x480.jpg
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 1
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteAndRegions
+                    [AutoPay] => 0
+                    [BidIncrement] => 5.00
+                    [Country] => ch
+                    [MinimumToBid] => 805.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 480
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 25865
+                            [CategoryFullName] => Heimwerker & Garten:Garten:Möbel:Tische
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 977.44
+                    [ConvertedBuyItNowPrice] => 977.44
+                    [BuyItNowPrice] => 800.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => *** 9 Teilige-Teak-Garnitur mit Tisch - Stühle nach Wahl ***
+<br>
+ <br>
+<br>
+ <br>
+<br>
+Hier läßt sich der Feierabend genießen und zusammen mit Freunden feiern.
+<br>
+ <br>
+<br>
+Eine traumhaft elegante Garnitur auf die man Sie anspricht. Eine vernünftige Investition, die man nur 1 mal tätigt, denn bei dieser Verarbeitung halten diese Möbel ein Leben lang. Dem enorm stabilen Holz kann so leicht nichts anhaben. Regen - Sonne - Kälte ist kein Problem und das bei minimaler Pflege.
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929772
+                    [Location] => Deutschland /Stuttgart
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 0
+                            [Seconds] => 0
+                            [Hours] => 0
+                            [Minutes] => 0
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 0
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 0
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 0
+                            [SeeDescription] => 1
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 1
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [HighBidder] => Array
+                        (
+                            [User] => Array
+                                (
+                                    [AboutMe] => 0
+                                    [UserIdLastChanged] => 2004-06-01 14:44:47
+                                    [SiteId] => 0
+                                    [Status] => 1
+                                    [RegDate] => 2004-06-01 14:44:12
+                                    [SellerLevel] => 0
+                                    [StoreOwner] => 0
+                                    [IsLAAuthorized] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [eBayGoodStanding] => 1
+                                    [MerchandisingPref] => 1
+                                    [IDVerified] => 0
+                                    [Star] => 0
+                                    [CIPBankAccountStored] => 0
+                                    [UserIdChanged] => 1
+                                    [CheckoutEnabled] => 1
+                                    [NewUser] => 1
+                                    [UserId] => demenevbuyer
+                                    [EIAS] => nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wJnY+lCZCLpQ+dj6x9nY+seQ==
+                                    [Feedback] => Array
+                                        (
+                                            [Score] => 0
+                                        )
+
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [BidCount] => 1
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-09 16:11:50
+                    [StartTime] => 2004-06-09 16:10:59
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 800.00
+                    [QuantitySold] => 1
+                    [PictureURL] => http://www.teakparadies.com/tisch_eckig/tisch_eckig_640x480.jpg
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 1
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteAndRegions
+                    [AutoPay] => 0
+                    [BidIncrement] => 5.00
+                    [Country] => ch
+                    [MinimumToBid] => 805.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 480
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 25865
+                            [CategoryFullName] => Heimwerker & Garten:Garten:Möbel:Tische
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 977.44
+                    [ConvertedBuyItNowPrice] => 977.44
+                    [BuyItNowPrice] => 800.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => *** 9 Teilige-Teak-Garnitur mit Tisch - Stühle nach Wahl ***
+<br>
+ <br>
+<br>
+ <br>
+<br>
+Hier läßt sich der Feierabend genießen und zusammen mit Freunden feiern.
+<br>
+ <br>
+<br>
+Eine traumhaft elegante Garnitur auf die man Sie anspricht. Eine vernünftige Investition, die man nur 1 mal tätigt, denn bei dieser Verarbeitung halten diese Möbel ein Leben lang. Dem enorm stabilen Holz kann so leicht nichts anhaben. Regen - Sonne - Kälte ist kein Problem und das bei minimaler Pflege.
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929811
+                    [Location] => Deutschland /Stuttgart
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 0
+                            [Seconds] => 0
+                            [Hours] => 0
+                            [Minutes] => 0
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 0
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 0
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 0
+                            [SeeDescription] => 1
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 1
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [HighBidder] => Array
+                        (
+                            [User] => Array
+                                (
+                                    [AboutMe] => 0
+                                    [UserIdLastChanged] => 2004-06-01 14:44:47
+                                    [SiteId] => 0
+                                    [Status] => 1
+                                    [RegDate] => 2004-06-01 14:44:12
+                                    [SellerLevel] => 0
+                                    [StoreOwner] => 0
+                                    [IsLAAuthorized] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [eBayGoodStanding] => 1
+                                    [MerchandisingPref] => 1
+                                    [IDVerified] => 0
+                                    [Star] => 0
+                                    [CIPBankAccountStored] => 0
+                                    [UserIdChanged] => 1
+                                    [CheckoutEnabled] => 1
+                                    [NewUser] => 1
+                                    [UserId] => demenevbuyer
+                                    [EIAS] => nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wJnY+lCZCLpQ+dj6x9nY+seQ==
+                                    [Feedback] => Array
+                                        (
+                                            [Score] => 0
+                                        )
+
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [8] => Array
+                (
+                    [BidCount] => 1
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-09 16:26:37
+                    [StartTime] => 2004-06-09 16:22:21
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 800.00
+                    [QuantitySold] => 1
+                    [PictureURL] => http://www.teakparadies.com/tisch_eckig/tisch_eckig_640x480.jpg
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 1
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteAndRegions
+                    [AutoPay] => 0
+                    [BidIncrement] => 5.00
+                    [Country] => ch
+                    [MinimumToBid] => 805.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 480
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 25865
+                            [CategoryFullName] => Heimwerker & Garten:Garten:Möbel:Tische
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 977.44
+                    [ConvertedBuyItNowPrice] => 977.44
+                    [BuyItNowPrice] => 800.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => *** 9 Teilige-Teak-Garnitur mit Tisch - Stühle nach Wahl ***
+<br>
+ <br>
+<br>
+ <br>
+<br>
+Hier läßt sich der Feierabend genießen und zusammen mit Freunden feiern.
+<br>
+ <br>
+<br>
+Eine traumhaft elegante Garnitur auf die man Sie anspricht. Eine vernünftige Investition, die man nur 1 mal tätigt, denn bei dieser Verarbeitung halten diese Möbel ein Leben lang. Dem enorm stabilen Holz kann so leicht nichts anhaben. Regen - Sonne - Kälte ist kein Problem und das bei minimaler Pflege.
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929819
+                    [Location] => Deutschland /Stuttgart
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 0
+                            [Seconds] => 0
+                            [Hours] => 0
+                            [Minutes] => 0
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 0
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 0
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 0
+                            [SeeDescription] => 1
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 1
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [HighBidder] => Array
+                        (
+                            [User] => Array
+                                (
+                                    [AboutMe] => 0
+                                    [UserIdLastChanged] => 2004-06-01 14:44:47
+                                    [SiteId] => 0
+                                    [Status] => 1
+                                    [RegDate] => 2004-06-01 14:44:12
+                                    [SellerLevel] => 0
+                                    [StoreOwner] => 0
+                                    [IsLAAuthorized] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [eBayGoodStanding] => 1
+                                    [MerchandisingPref] => 1
+                                    [IDVerified] => 0
+                                    [Star] => 0
+                                    [CIPBankAccountStored] => 0
+                                    [UserIdChanged] => 1
+                                    [CheckoutEnabled] => 1
+                                    [NewUser] => 1
+                                    [UserId] => demenevbuyer
+                                    [EIAS] => nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wJnY+lCZCLpQ+dj6x9nY+seQ==
+                                    [Feedback] => Array
+                                        (
+                                            [Score] => 0
+                                        )
+
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [9] => Array
+                (
+                    [BidCount] => 1
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-09 16:38:37
+                    [StartTime] => 2004-06-09 16:38:00
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 800.00
+                    [QuantitySold] => 1
+                    [PictureURL] => http://www.teakparadies.com/tisch_eckig/tisch_eckig_640x480.jpg
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 1
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteAndRegions
+                    [AutoPay] => 0
+                    [BidIncrement] => 5.00
+                    [Country] => ch
+                    [MinimumToBid] => 805.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 480
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 25865
+                            [CategoryFullName] => Heimwerker & Garten:Garten:Möbel:Tische
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 977.44
+                    [ConvertedBuyItNowPrice] => 977.44
+                    [BuyItNowPrice] => 800.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => *** 9 Teilige-Teak-Garnitur mit Tisch - Stühle nach Wahl ***
+<br>
+ <br>
+<br>
+ <br>
+<br>
+Hier läßt sich der Feierabend genießen und zusammen mit Freunden feiern.
+<br>
+ <br>
+<br>
+Eine traumhaft elegante Garnitur auf die man Sie anspricht. Eine vernünftige Investition, die man nur 1 mal tätigt, denn bei dieser Verarbeitung halten diese Möbel ein Leben lang. Dem enorm stabilen Holz kann so leicht nichts anhaben. Regen - Sonne - Kälte ist kein Problem und das bei minimaler Pflege.
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929846
+                    [Location] => Deutschland /Stuttgart
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 0
+                            [Seconds] => 0
+                            [Hours] => 0
+                            [Minutes] => 0
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 0
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 0
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 0
+                            [SeeDescription] => 1
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 1
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [HighBidder] => Array
+                        (
+                            [User] => Array
+                                (
+                                    [AboutMe] => 0
+                                    [UserIdLastChanged] => 2004-06-01 14:44:47
+                                    [SiteId] => 0
+                                    [Status] => 1
+                                    [RegDate] => 2004-06-01 14:44:12
+                                    [SellerLevel] => 0
+                                    [StoreOwner] => 0
+                                    [IsLAAuthorized] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [eBayGoodStanding] => 1
+                                    [MerchandisingPref] => 1
+                                    [IDVerified] => 0
+                                    [Star] => 0
+                                    [CIPBankAccountStored] => 0
+                                    [UserIdChanged] => 1
+                                    [CheckoutEnabled] => 1
+                                    [NewUser] => 1
+                                    [UserId] => demenevbuyer
+                                    [EIAS] => nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wJnY+lCZCLpQ+dj6x9nY+seQ==
+                                    [Feedback] => Array
+                                        (
+                                            [Score] => 0
+                                        )
+
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+            [10] => Array
+                (
+                    [BidCount] => 1
+                    [GiftIcon] => 0
+                    [SiteId] => 77
+                    [Counter] => 0
+                    [EndTime] => 2004-06-09 16:51:49
+                    [StartTime] => 2004-06-09 16:51:12
+                    [Zip] => 00000
+                    [Quantity] => 1
+                    [PhotoDisplayType] => 0
+                    [Currency] => 7
+                    [CurrentPrice] => 800.00
+                    [QuantitySold] => 1
+                    [PictureURL] => http://www.teakparadies.com/tisch_eckig/tisch_eckig_640x480.jpg
+                    [ApplicationData] => 
+                    [GalleryURL] => 
+                    [SecondChanceEligible] => 0
+                    [Charity] => 0
+                    [PhotoCount] => 1
+                    [ItemRevised] => 0
+                    [Region] => 
+                    [ShippingOption] => SiteAndRegions
+                    [AutoPay] => 0
+                    [BidIncrement] => 5.00
+                    [Country] => ch
+                    [MinimumToBid] => 805.00
+                    [TitleBarImage] => 0
+                    [CurrencyId] => EUR
+                    [GoodTillCanceled] => 0
+                    [DescriptionLen] => 480
+                    [StorefrontItem] => 0
+                    [UUID] => 
+                    [Category] => Array
+                        (
+                            [CategoryId] => 25865
+                            [CategoryFullName] => Heimwerker & Garten:Garten:Möbel:Tische
+                        )
+
+                    [ReservePrice] => 0.00
+                    [ConvertedPrice] => 977.44
+                    [ConvertedBuyItNowPrice] => 977.44
+                    [BuyItNowPrice] => 800.00
+                    [StartPrice] => 300.00
+                    [CharityListing] => 0
+                    [ConvertedStartPrice] => 366.54
+                    [SiteCurrency] => 1
+                    [BuyerProtection] => 0
+                    [Description] => *** 9 Teilige-Teak-Garnitur mit Tisch - Stühle nach Wahl ***
+<br>
+ <br>
+<br>
+ <br>
+<br>
+Hier läßt sich der Feierabend genießen und zusammen mit Freunden feiern.
+<br>
+ <br>
+<br>
+Eine traumhaft elegante Garnitur auf die man Sie anspricht. Eine vernünftige Investition, die man nur 1 mal tätigt, denn bei dieser Verarbeitung halten diese Möbel ein Leben lang. Dem enorm stabilen Holz kann so leicht nichts anhaben. Regen - Sonne - Kälte ist kein Problem und das bei minimaler Pflege.
+                    [Title] => Table Oval 160-200 x 90 x 74 cm incl. 6 chairs
+                    [SubtitleText] => 
+                    [Id] => 4500929853
+                    [Location] => Deutschland /Stuttgart
+                    [TimeLeft] => Array
+                        (
+                            [Days] => 0
+                            [Seconds] => 0
+                            [Hours] => 0
+                            [Minutes] => 0
+                        )
+
+                    [PaymentTerms] => Array
+                        (
+                            [OtherPaymentsOnline] => 0
+                            [CashOnPickupAccepted] => 0
+                            [Other] => 0
+                            [Escrow] => 0
+                            [MoneyXferAccepted] => 0
+                            [MoneyXferAcceptedinCheckout] => 0
+                            [COD] => 0
+                            [PersonalCheck] => 0
+                            [AmEx] => 0
+                            [CCAccepted] => 0
+                            [SeeDescription] => 1
+                            [MOCashiers] => 0
+                            [EscrowBySeller] => 0
+                            [Discover] => 0
+                            [VisaMaster] => 0
+                        )
+
+                    [ItemProperties] => Array
+                        (
+                            [Reserve] => 0
+                            [BindingAuction] => 0
+                            [Gallery] => 0
+                            [GalleryFeatured] => 0
+                            [Featured] => 0
+                            [Highlight] => 0
+                            [CheckoutEnabled] => 1
+                            [BoldTitle] => 0
+                            [Type] => 1
+                            [Private] => 0
+                            [SuperFeatured] => 0
+                            [Adult] => 0
+                            [ReserveMet] => 1
+                        )
+
+                    [ShippingRegions] => Array
+                        (
+                            [Africa] => 0
+                            [SouthAmerica] => 0
+                            [NorthAmerica] => 0
+                            [Asia] => 0
+                            [Europe] => 1
+                            [MiddleEast] => 0
+                            [LatinAmerica] => 0
+                            [Oceania] => 0
+                            [Caribbean] => 0
+                        )
+
+                    [ShippingTerms] => Array
+                        (
+                            [BuyerPayBySellersFixed] => 0
+                            [BuyerPaysActual] => 0
+                            [SeeDescription] => 1
+                            [SellerPays] => 0
+                        )
+
+                    [GiftServices] => Array
+                        (
+                            [GiftExpressShipping] => 0
+                            [GiftShipToRecipient] => 0
+                            [GiftWrap] => 0
+                        )
+
+                    [Checkout] => Array
+                        (
+                            [Details] => Array
+                                (
+                                    [SalesTaxState] => 
+                                    [ShippingInTax] => 
+                                    [ApplyShippingDiscount] => 0
+                                    [ShippingHandlingCosts] => 0.00
+                                    [InsuranceOption] => 0
+                                    [CheckoutRedirect] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [SalesTaxPercent] => 
+                                    [ShippingType] => 1
+                                    [AdditionalShippingCosts] => 0.00
+                                    [CheckoutInstructions] => 
+                                    [InsuranceFee] => 0.00
+                                )
+
+                        )
+
+                    [HighBidder] => Array
+                        (
+                            [User] => Array
+                                (
+                                    [AboutMe] => 0
+                                    [UserIdLastChanged] => 2004-06-01 14:44:47
+                                    [SiteId] => 0
+                                    [Status] => 1
+                                    [RegDate] => 2004-06-01 14:44:12
+                                    [SellerLevel] => 0
+                                    [StoreOwner] => 0
+                                    [IsLAAuthorized] => 0
+                                    [AllowPaymentEdit] => 1
+                                    [eBayGoodStanding] => 1
+                                    [MerchandisingPref] => 1
+                                    [IDVerified] => 0
+                                    [Star] => 0
+                                    [CIPBankAccountStored] => 0
+                                    [UserIdChanged] => 1
+                                    [CheckoutEnabled] => 1
+                                    [NewUser] => 1
+                                    [UserId] => demenevbuyer
+                                    [EIAS] => nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wJnY+lCZCLpQ+dj6x9nY+seQ==
+                                    [Feedback] => Array
+                                        (
+                                            [Score] => 0
+                                        )
+
+                                )
+
+                        )
+
+                    [ListingDesigner] => Array
+                        (
+                            [ThemeId] => 7710
+                            [LayoutId] => 7710000
+                        )
+
+                )
+
+        )
+
+    [ReturnedItemCountActual] => 10
+    [PageNumber] => 1
+    [HasMoreItems] => 1
+    [TotalNumberOfPages] => 2
+    [Count] => 11
+    [ItemsPerPage] => 10
+    [Seller] => Array
+        (
+            [User] => Array
+                (
+                    [AboutMe] => 0
+                    [UserIdLastChanged] => 2004-06-01 14:00:17
+                    [SiteId] => 0
+                    [Status] => 1
+                    [RegDate] => 2004-06-01 13:59:09
+                    [SellerLevel] => 0
+                    [eBayGoodStanding] => 1
+                    [AllowPaymentEdit] => 1
+                    [CIPBankAccountStored] => 0
+                    [CheckoutEnabled] => 1
+                    [MerchandisingPref] => 1
+                    [Star] => 0
+                    [StoreOwner] => 0
+                    [IsLAAuthorized] => 0
+                    [IDVerified] => 1
+                    [UserIdChanged] => 1
+                    [NewUser] => 1
+                    [UserId] => demenevtest
+                    [Feedback] => Array
+                        (
+                            [Score] => 0
+                        )
+
+                )
+
+        )
+
+)

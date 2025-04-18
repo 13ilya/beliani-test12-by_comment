@@ -1,0 +1,12 @@
+
+intrinsic class mx.skins.ColoredSkinElement
+{
+   public var _color;
+   public function draw(Void):Void;
+   public var getStyle:Function;
+   public function invalidateStyle(Void):Void;
+   static var mixins:mx.skins.ColoredSkinElement;
+   public var onEnterFrame:Function;
+   public function setColor(c:Number):Void;
+   static function setColorStyle(p:Object, colorStyle:String):Void;
+};

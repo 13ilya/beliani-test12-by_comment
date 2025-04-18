@@ -1,0 +1,85 @@
+$border: #ccc;
+$bg_corrective:#c6ffc6;
+.dropBox img {
+    width: auto;
+    max-height: 198px;
+}
+.issuelog_corrective{
+    background-color:$bg_corrective;
+}
+.issue_log_list{
+    .text_in_table{
+        max-width: 350px;
+        word-wrap: break-word;
+    }
+}
+.new_line{
+    margin-bottom:10px;
+}
+.delete_file{
+
+}
+table.shipping_prices_monitor_table{
+    tr{
+        td{
+            textarea{
+                width: 100%;
+            }
+        }
+    }
+}
+.issuelog_table{
+    tr{
+        td{
+            &.control{
+                width: 70px;
+            }
+        }
+    }
+}
+.Select{
+    .Select-control{
+        border-color: black;
+    }
+}
+
+
+.logsTable textarea{
+    min-height:80px!important;
+    height:auto!important;
+}
+.image_inner{
+    border:1px solid $border;
+    min-height:200px;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+.table-header{
+    .hovered{
+        cursor:pointer;
+        &:hover{
+            color:red;
+        }
+    }
+}
+.filtersBlock{
+    .row{
+        margin-bottom:10px;
+        .title{
+            margin-top:5px;
+        }
+    }
+    .bordered_block{
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        padding: 11px;
+        &:last-of-type{
+            border-left: none;
+        }
+    }
+}
+.files_list{
+    li{
+        padding: 2px;
+    }
+}

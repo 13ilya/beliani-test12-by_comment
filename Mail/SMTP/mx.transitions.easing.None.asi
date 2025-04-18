@@ -1,0 +1,8 @@
+
+intrinsic class mx.transitions.easing.None
+{
+   static function easeIn(t:Number, b:Number, c:Number, d:Number):Number;
+   static function easeInOut(t:Number, b:Number, c:Number, d:Number):Number;
+   static function easeNone(t:Number, b:Number, c:Number, d:Number):Number;
+   static function easeOut(t:Number, b:Number, c:Number, d:Number):Number;
+};

@@ -1,0 +1,40 @@
+import mx.core.UIObject;
+import mx.skins.RectBorder;
+import mx.managers.DepthManager;
+import mx.events.UIEventDispatcher;
+import mx.core.UIComponent;
+
+intrinsic class mx.core.View extends mx.core.UIComponent
+{
+   public function View();
+   public var __get__tabIndex:Function;
+   public var __tabIndex:Number;
+   private var _loadExternalClass:String;
+   public function addLayoutObject(object:Object):Void;
+   public var border_mc:mx.skins.RectBorder;
+   public var boundingBox_mc:MovieClip;
+   public function childLoaded(obj:MovieClip):Void;
+   static var childNameBase:String;
+   public var className:String;
+   public function convertToUIObject(obj:MovieClip):Void;
+   public function createChild(className, instanceName:String, initProps:Object):MovieClip;
+   public function createChildren():Void;
+   public var createClassChildAtDepth:Function;
+   public var depth:Number;
+   public function destroyChildAt(childIndex:Number):Void;
+   public function doLayout():Void;
+   public function draw():Void;
+   static function extension();
+   public function getChildAt(childIndex:Number):mx.core.UIObject;
+   private var hasBeenLayedOut:Boolean;
+   public function init():Void;
+   public function initLayout():Void;
+   public var loadExternal:Function;
+   function get numChildren():Number;
+   public function size():Void;
+   static var symbolName:String;
+   static var symbolOwner:Object;
+   function get tabIndex():Number;
+   function set tabIndex(n:Number);
+   static var version:String;
+};

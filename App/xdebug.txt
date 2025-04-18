@@ -1,0 +1,14 @@
+Debugging with Xdebug + PHPStorm
+
+1. Install 'Xdebug helper' extension for Google Chrome (https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc) or 'easy Xdebug' for Firefox browser (https://addons.mozilla.org/en-US/firefox/addon/easy-xdebug)
+
+2. In PHPStorm add deployment server and set deployment mappings in Settings / Preferences | Build, Execution, Deployment | Deployment. Screenshots: 
+    https://www.dropbox.com/s/emk42nsocxxlpmr/2016-06-14_170756.jpg?dl=0
+    https://www.dropbox.com/s/pjzoelep3l3jcrn/2016-06-14_170947.jpg?dl=0
+    
+3. Setup an SSH tunnel to the remote machine. Follow section 2 of instruction from here https://confluence.jetbrains.com/display/PhpStorm/Remote+debugging+in+PhpStorm+via+SSH+tunnel 
+
+4.1. In the IDE set breakpoint on the line of the file you want to debug (or enable option in the menu Run | Break at first line in PHP)
+4.2. From the toolbar, toggle the “Listen debugger connections” button or use the Run | Start Listening for PHP Debug Connections menu. 
+4.3. Visit page you want to debug (e.g. http://176.9.138.197/auction.php?number=313684&txnid=3) and set 'Xdebug helper' extension to the debug mode. 
+4.4 After reloading page IDE will opens the debug tool window https://www.dropbox.com/s/8jrm0bd9dalkywn/2016-06-14_173731.jpg?dl=0

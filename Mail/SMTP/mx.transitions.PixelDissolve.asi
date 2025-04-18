@@ -1,0 +1,21 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.PixelDissolve extends mx.transitions.Transition
+{
+   public function PixelDissolve(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private var _indices:Array;
+   private function _initMask():Void;
+   private var _innerMask:MovieClip;
+   private var _mask:MovieClip;
+   private var _numSections:Number;
+   private function _render(p:Number):Void;
+   private function _shuffleArray(a:Array):Void;
+   private var _xSections:Number;
+   private var _ySections:Number;
+   public var className:String;
+   public function cleanUp():Void;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public function start():Void;
+   public var type:Object;
+};

@@ -1,0 +1,11 @@
+import mx.core.UIComponent;
+
+intrinsic class mx.core.ext.UIComponentExtensions
+{
+   static function Extensions():Boolean;
+   static var FocusManagerDependency;
+   static var OverlappedWindowsDependency;
+   static var UIComponentDependency;
+   static var UIComponentExtended;
+   static var bExtended;
+};

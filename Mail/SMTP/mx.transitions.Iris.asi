@@ -1,0 +1,26 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.Iris extends mx.transitions.Transition
+{
+   public function Iris(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private var _cornerMode:Boolean;
+   private function _drawHalfCircle(mc:MovieClip, r:Number):Void;
+   private function _drawQuarterCircle(mc:MovieClip, r:Number):Void;
+   private function _initMask():Void;
+   private var _mask:MovieClip;
+   private var _maxDimension:Number;
+   private var _minDimension:Number;
+   private function _render(p:Number):Void;
+   private function _renderCircle(p:Number):Void;
+   private var _renderShape:Function;
+   private function _renderSquareCorner(p:Number):Void;
+   private function _renderSquareEdge(p:Number):Void;
+   private var _shape:String;
+   private var _startPoint:Number;
+   public var className:String;
+   public function cleanUp():Void;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public function start():Void;
+   public var type:Object;
+};

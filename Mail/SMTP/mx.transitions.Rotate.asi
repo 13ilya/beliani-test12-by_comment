@@ -1,0 +1,13 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.Rotate extends mx.transitions.Transition
+{
+   public function Rotate(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private var _degrees:Number;
+   private function _render(p:Number):Void;
+   private var _rotationFinal:Number;
+   public var className:String;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public var type:Object;
+};

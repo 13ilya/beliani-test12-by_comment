@@ -1,0 +1,19 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.Wipe extends mx.transitions.Transition
+{
+   public function Wipe(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private var _cornerMode:Boolean;
+   private function _drawSlant(mc:MovieClip, p:Number):Void;
+   private function _initMask():Void;
+   private var _innerMask:MovieClip;
+   private var _mask:MovieClip;
+   private function _render(p:Number):Void;
+   private var _startPoint:Number;
+   public var className:String;
+   public function cleanUp():Void;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public function start():Void;
+   public var type:Object;
+};

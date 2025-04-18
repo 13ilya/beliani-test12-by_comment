@@ -1,0 +1,60 @@
+import mx.core.UIObject;
+import mx.core.View;
+import mx.core.UIComponent;
+
+[Event("complete")] 
+[Event("progress")] 
+[TagName("Loader")] 
+[IconFile("Loader.png")] 
+intrinsic class mx.controls.Loader extends mx.core.View
+{
+   public function Loader();
+   public var __autoLoad:Boolean;
+   public var __bytesLoaded:Number;
+   public var __bytesTotal:Number;
+   public var __contentPath:String;
+   public var __get__autoLoad:Function;
+   public var __get__contentPath:Function;
+   public var __get__scaleContent:Function;
+   public var __scaleContent:Boolean;
+   public var _origHeight:Number;
+   public var _origWidth:Number;
+   [Inspectable(defaultValue=true)] function get autoLoad():Boolean;
+   function set autoLoad(b:Boolean):Void;
+   function get bytesLoaded():Number;
+   function get bytesTotal():Number;
+   public function childLoaded(obj:MovieClip):Void;
+   public var className:String;
+   public var clipParameters:Object;
+   function get content():mx.core.UIComponent;
+   public var contentHolder:mx.core.UIComponent;
+   [Inspectable(defaultValue="")] [Bindable] function get contentPath():String;
+   function set contentPath(c:String):Void;
+   public function createChildren():Void;
+   public function dispatchEvent(obj:Object):Void;
+   public function doScaleContent():Void;
+   public function doScaleLoader():Void;
+   public function draw():Void;
+   public function getAutoLoad():Boolean;
+   public function getBytesLoaded():Number;
+   public function getBytesTotal():Number;
+   public function getContent():mx.core.UIComponent;
+   public function getContentPath():String;
+   public function getPercentLoaded():Number;
+   public function getScaleContent():Boolean;
+   public function init():Void;
+   public function load(url:String):Void;
+   static var mergedClipParameters:Boolean;
+   [Bindable("readonly")] [ChangeEvent("progress")] function get percentLoaded():Number;
+   [Inspectable(defaultValue=true)] function get scaleContent():Boolean;
+   function set scaleContent(b:Boolean):Void;
+   public function setAutoLoad(b:Boolean):Void;
+   public function setContentPath(url:String):Void;
+   public function setScaleContent(b:Boolean):Void;
+   public function setSize(w:Number, h:Number, noEvent:Boolean):Void;
+   public function size():Void;
+   static var symbolName:String;
+   static var symbolOwner:Object;
+   public function unScaleContent():Void;
+   static var version:String;
+};

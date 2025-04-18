@@ -1,0 +1,16 @@
+
+intrinsic class mx.styles.StyleManager
+{
+   static var TextFormatStyleProps:Object;
+   static var TextStyleMap:Object;
+   static var colorNames:Object;
+   static var colorStyles:Object;
+   static function getColorName(colorName:String):Number;
+   static var inheritingStyles:Object;
+   static function isColorName(colorName:String):Boolean;
+   static function isColorStyle(styleName:String):Boolean;
+   static function isInheritingStyle(styleName:String):Boolean;
+   static function registerColorName(colorName:String, colorValue:Number):Void;
+   static function registerColorStyle(styleName:String):Void;
+   static function registerInheritingStyle(styleName:String):Void;
+};

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:cis="http://dhl.de/webservice/cisbase" xmlns:de="http://de.ws.intraship">
+   <soap:Header>
+      <cis:Authentification>
+         <cis:user>bcontrol</cis:user>  <!--User GKP -->
+         <cis:signature>Widmer2016!</cis:signature> <!--Passwort aus GKP -->
+         <cis:type>0</cis:type> 
+      </cis:Authentification>
+   </soap:Header>
+   <soap:Body>
+      <de:CreateShipmentDDRequest>  <!-- Nachrichtenname -->
+         <cis:Version>
+            <cis:majorRelease>1</cis:majorRelease> <!-- Fixer Wert -->
+            <cis:minorRelease>0</cis:minorRelease> <!-- Fixer Wert -->
+         </cis:Version>
+         <!--1 oder mehrere Wiederholungen max 50-->
+         <ShipmentOrder>  <!-- Auftrag -->
+            <SequenceNumber>1</SequenceNumber> <!--  erste Sendung -->
+            <Shipment>
+               <ShipmentDetails>
+                  <ProductCode>EPN</ProductCode> <!-- Verfahren 01 (DHL Paket)-->
+                  <ShipmentDate>2016-07-25</ShipmentDate> <!-- AusfÃ¼hrungsdatum mind. Tagesdatum-->
+                  <cis:EKP>7000837587</cis:EKP>  <!-- EKP -->
+                  <Attendance>
+                     <cis:partnerID>14</cis:partnerID> <!-- Teilnahme -->
+                  </Attendance>
+                  <!--1 or mehrere Wiederholungen max 50-->
+                  <ShipmentItem>
+                     <WeightInKG>1.1</WeightInKG> <!-- Gewicht -->
+                     <PackageType>PK</PackageType> <!-- Verpackungsart -->
+                  </ShipmentItem>
+               </ShipmentDetails>
+               <Shipper> <!-- Absender -->
+                  <Company> <!-- Absendername -->
+                     <cis:Company>
+                        <cis:name1>Lagerhaus_Bellani</cis:name1>                       
+                     </cis:Company>
+                  </Company>
+                  <Address> <!-- Absenderadresse -->
+                     <cis:streetName>Seeweg</cis:streetName>
+                     <cis:streetNumber>1</cis:streetNumber>
+                     <cis:Zip>
+                        <cis:germany>17291</cis:germany>
+                     </cis:Zip>
+                     <cis:city>Grünow</cis:city>
+                     <cis:Origin>
+                        <cis:countryISOCode>DE</cis:countryISOCode>
+                     </cis:Origin>
+                  </Address>
+                  <Communication> <!-- Kontaktdaten Felder m�ssen gef�llt sein -->
+                    <cis:phone>07123987654</cis:phone> 
+                    <cis:email>Vertrieb@dhl.com</cis:email> 
+                    <cis:contactPerson>Herr Mustetr</cis:contactPerson> 
+                  </Communication>
+               </Shipper>
+               <Receiver> <!--  Empf�ngerangaben -->
+                  <Company> 
+                     <cis:Company>
+                        <cis:name1>Empfänger Name1</cis:name1>
+                        <cis:name2>Empfänger Name2</cis:name2>
+                     </cis:Company>
+                  </Company>
+                  <Address>
+                     <cis:streetName>Allmendstrasse</cis:streetName>
+                     <cis:streetNumber>3</cis:streetNumber>
+                     <cis:Zip>
+                        <cis:other>72770</cis:other>
+                     </cis:Zip>
+                     <cis:city>Reutlingen</cis:city>
+                     <cis:Origin>
+                        <cis:countryISOCode>DE</cis:countryISOCode>
+                     </cis:Origin>
+                  </Address>
+                  <Communication>
+                     <cis:phone>07459/921-1234</cis:phone> 
+                     <cis:email>kontakt@dhl.com</cis:email> 
+                     <cis:contactPerson>Empfänger Name3</cis:contactPerson> 
+                  </Communication>
+               </Receiver>
+            </Shipment>
+            <!--Optional:-->
+            <LabelResponseType>URL</LabelResponseType>
+         </ShipmentOrder>
+      </de:CreateShipmentDDRequest>
+   </soap:Body>
+</soap:Envelope>

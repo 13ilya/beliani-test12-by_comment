@@ -1,0 +1,19 @@
+import mx.core.UIObject;
+import mx.skins.halo.Defaults;
+import mx.managers.DepthManager;
+import mx.skins.SkinElement;
+import mx.core.UIComponent;
+
+intrinsic class mx.skins.halo.FocusRect extends mx.skins.SkinElement
+{
+   static var DefaultsDependency:mx.skins.halo.Defaults;
+   public function FocusRect();
+   static var UIComponentDependency:mx.core.UIComponent;
+   public var boundingBox_mc:MovieClip;
+   static function classConstruct():Boolean;
+   static var classConstructed:Boolean;
+   public function draw(o:Object):Void;
+   public var drawRoundRect:Function;
+   public function handleEvent(e:Object):Void;
+   public function setSize(w:Number, h:Number, r, a:Number, rectCol:Number):Void;
+};

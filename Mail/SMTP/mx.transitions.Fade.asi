@@ -1,0 +1,12 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.Fade extends mx.transitions.Transition
+{
+   public function Fade(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private var _alphaFinal:Number;
+   private function _render(p:Number):Void;
+   public var className:String;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public var type:Object;
+};

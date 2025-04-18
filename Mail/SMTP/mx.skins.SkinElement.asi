@@ -1,0 +1,12 @@
+
+intrinsic class mx.skins.SkinElement extends MovieClip
+{
+   public function __set__visible(visible:Boolean):Void;
+   public var height:Number;
+   public function move(x:Number, y:Number):Void;
+   static function registerElement(name:String, className:Function):Void;
+   public function setSize(w:Number, h:Number):Void;
+   public var top:Number;
+   public var visible:Boolean;
+   public var width:Number;
+};

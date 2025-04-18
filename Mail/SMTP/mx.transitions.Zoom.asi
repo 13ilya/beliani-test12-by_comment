@@ -1,0 +1,13 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.Zoom extends mx.transitions.Transition
+{
+   public function Zoom(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private function _render(p:Number):Void;
+   private var _xscaleFinal:Number;
+   private var _yscaleFinal:Number;
+   public var className:String;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public var type:Object;
+};

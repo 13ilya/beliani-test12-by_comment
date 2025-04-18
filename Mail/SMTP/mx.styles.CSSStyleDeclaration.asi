@@ -1,0 +1,24 @@
+import mx.styles.StyleManager;
+import mx.styles.CSSTextStyles;
+
+intrinsic class mx.styles.CSSStyleDeclaration
+{
+   static var CSSTextStylesDependency;
+   public function __getTextFormat(tf:TextFormat, bAll:Boolean):Boolean;
+   public var _tf:TextFormat;
+   static function classConstruct():Boolean;
+   static var classConstructed:Boolean;
+   public var color:Number;
+   public var embedFonts:Boolean;
+   public var fontFamily:String;
+   public var fontSize:Number;
+   public var fontStyle:String;
+   public var fontWeight:String;
+   public function getStyle(styleProp:String);
+   public var marginLeft:Number;
+   public var marginRight:Number;
+   public var styleName:String;
+   public var textAlign:String;
+   public var textDecoration:String;
+   public var textIndent:Number;
+};

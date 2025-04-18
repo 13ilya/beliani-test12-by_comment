@@ -1,0 +1,852 @@
+body{
+    background-color: #f3f3f4;
+}
+.clear_ul{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+.set_space{
+    margin-left: 5px;
+}
+.clear_float:after{
+    content:'';
+    display: block;
+    clear: both;
+
+}
+.hovered{
+    cursor: pointer;
+    &:hover{
+        color:red;
+    }
+}
+
+a {
+    cursor: pointer;
+    &#Price~table td:first-of-type {
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+td{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+textarea.form-control{
+    height: 200px;
+    resize: vertical;
+}
+span.paramSpan {
+    width: 80px;
+}
+input.paramInput {
+    display: inline-block;
+    width: 100%;
+}
+.def_btn {
+    @extend .btn;
+    @extend .btn-default;
+    &.action_buttons{
+        margin: 5px auto;
+    }
+}
+.btn{
+    &.btn-danger,&.btn-success{
+        padding:10px;
+    }
+}
+.inactive{background-color:#f7f7f7;}
+.inactive-btn{float: right; padding: 2px;}
+.icons_block {
+    .input-group {
+        margin-bottom: 10px;
+        .input-group-addon:nth-of-type(2) {
+            background-color: white
+        }
+    }
+}
+.inputBlock{
+    text-align: left;
+    position: absolute;
+    top: 90px;
+    left: 25px;
+    right: 25px;
+    border-radius: 4px;
+    z-index: 50;
+    opacity: 0.5;
+    &>.input-group span:last-of-type {
+        width: 20px;
+    }
+    &>.input-group span {
+        font-size: 0.9em;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        border: 0px;
+        text-align: left;
+    }
+    &:hover {
+        opacity: 1;
+    }
+    div {
+        float: right;
+    }
+}
+.check_wrapper {
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    line-height: 22px;
+    .check_area{
+        display: inline-block;
+        background: #ddd;
+        text-align: center;
+        width: 21px;
+        margin: auto;
+        input{
+            margin:0;
+            margin: 5px 0px;
+            vertical-align: middle;
+        }
+    }
+    .label_area{
+        padding-left: 2px;
+    }
+}
+.colorSquare {
+    width: 40px;
+    height: 25px;
+    display: inline-block
+}
+.LabelAlign {
+    vertical-align: middle;
+}
+.LabelAlignSlave {
+    margin-bottom: 6px;
+    margin-left: 5px;
+}
+.Select{
+    &.is-open {
+        z-index: 100
+    }
+    .Select--single.has-value.is-open {
+        position: relative;
+        z-index: 10
+    }
+}
+
+.ParamBlock{
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+    /* border: 2px solid grey; */
+    box-shadow: 0px 0px 1px 1px whitesmoke;
+    border-radius: 1px;
+    line-height: 32px;
+    img {
+       height: 33px;
+       width: 30%;
+       margin: 0px 10px;
+       float: right
+   }
+   span {
+       white-space: nowrap;
+       padding-left: 6px;
+   }
+   button {
+       float: right
+   }
+}
+.panel-sup {
+    margin-bottom: 20px;
+}
+
+.alert{
+    &.alert-success{padding: 3px!important;}
+    &.default-alert{
+        padding:5px;
+    }
+}
+.filterInput span {
+    width: 100px!important
+}
+
+.unDoted {
+    list-style: none;
+}
+
+.nav.nav-tabs{
+    a.active,li.activeted a{
+        background-color: #3379b4;
+        color: white;
+    }
+}
+
+.calendar-inner {
+    position: absolute!important;
+    left: 13%;
+    top: 25px;
+    z-index: 100;
+    .rc-calendar-next-month-btn:after{content: '\203A';}
+    .rc-calendar-prev-month-btn:after{content: '\2039';}
+}
+
+.hasChilds {
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    &:before {
+        width: 0px;
+        display: block;
+        content: '';
+        height: 0px;
+        position: absolute;
+        border-width: 6px;
+        border-style: solid;
+        border-color: transparent #5d3333 transparent transparent;
+        right: -8px;
+        top: 3px;
+    }
+    &~ul {
+        display: none;
+    }
+    &.open~ul {
+        display: block;
+    }
+}
+
+.TableAlign {
+    vertical-align: middle!important;
+    text-align: center!important;
+}
+
+.standartTable>td {
+    font-size: 14px!important;
+}
+
+.noBorder{
+    td,th{
+        border: none!important;
+    }
+}
+
+.dropImgInner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.draggedImg {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+.DropOver {
+    box-shadow: 0px 0px 5px 3px green
+}
+
+.dropBox {
+    position: relative;
+    cursor: pointer;
+    img {
+        max-width: 200px;
+        height: auto;
+        max-height: 200px;
+        margin: auto;
+        display: block;
+        width: 80%;
+    }
+}
+.imageDropObject {
+    max-width: 200px;
+}
+
+.imgTable td {
+    position: relative;
+}
+.descrPopup_inner{
+    position: fixed;
+    border: 1px solid #cccccc;
+    background-color: white;
+    z-index: 100;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 800px;
+    height: 360px;
+    margin: auto;
+    padding: 10px;
+    .roundClose{
+        border-radius: 50px;
+        display: block;
+        width: 25px;
+        height: 25px;
+        border: 1px solid;
+        margin: 10px;
+        line-height: 22px;
+        box-sizing: border-box;
+    }
+}
+.descrPopup_imageBlock{
+    width:200px;
+    overflow: visible;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    left: 25px;
+    img{
+       width:100%;
+       border: 1px solid #cccccc;
+   }
+   .imgDescr{
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       right: 0px;
+       bottom: 0px;
+       text-align: left;
+   }
+}
+
+#unSavedInner {
+    opacity: 0.5;
+    &.open {
+        opacity: 1;
+    }
+}
+
+.b-dropdown-unSaved {
+    position: fixed;
+    top: 20%;
+    right: 40px;
+    z-index: 100;
+}
+
+.ShopMaster, .ShopSlave {
+    display: inline-block;
+    width: 150px;
+    vertical-align: top;
+    margin-top: 4px;
+}
+.ShopMaster {
+    font-weight: bold;
+}
+
+.blockHide {
+    display: none;
+}
+
+.FullAlert {
+    float: left!important;
+    width: 100%!important;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.logStyle
+
+.logStyle {
+    position: relative;
+    min-height: 50px;
+    text-align: center;
+    &.left {
+        text-align: left
+    }
+    &.block {
+        display: block;
+        text-align: left
+    }
+    &.linner {
+        line-height: 40px
+    }
+}
+.react-autosuggest__container--open{
+    z-index: 100;
+    .react-autosuggest__suggestions-container {
+        position: absolute;
+        left: 0px;
+        top: 32px;
+        width: 100%;
+        max-height: 300px;
+        overflow: auto;
+        border: 2px solid rgb(251, 251, 251);
+    }
+}
+.preloader{
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    width: 15px;
+}
+.react-autosuggest__container {
+    text-align: left;
+    position: relative;
+    ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        li{
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857;
+            color: #555555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            cursor: pointer;
+            &:hover {
+                background-color: #eee;
+            }
+        }
+    }
+    input {
+       display: block;
+       width: 100%;
+       height: 34px;
+       padding: 6px 12px;
+       font-size: 14px;
+       line-height: 1.42857;
+       color: #555555;
+       background-color: #fff;
+       background-image: none;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+       -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+       -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+       transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   }
+}
+.commentImageBlock {
+    position: absolute;
+    top: 26px;
+    left: 57px;
+    max-width: 200px;
+    background-color: white;
+    border: 1px solid blue;
+    display: none;
+    z-index: 100;
+    img {
+        width: 100%
+    }
+}
+
+.commentUsername {
+    position: relative;
+    &>a:hover~.commentImageBlock {
+        display: block
+    }
+}
+.paramName {
+    cursor: pointer;
+    &.copied {
+        color: #a0cea0!important
+    }
+}
+.imageCell {
+    .paramIcon {
+        right: 43px;
+        bottom: 9px;
+    }
+    .csv_block{
+        right: -15px;
+        bottom: 0px;
+        position: absolute;
+        .paramIcon {
+            position: relative;
+            display: inline-block;
+            margin-right: 5px;
+            &:hover{
+                position: absolute;
+                z-index: 100;
+            }
+        }
+    }
+}
+.demCell{
+    td{
+        &:not(:last-of-type){
+            min-width: 100px;
+            vertical-align: middle!important;
+            position: relative;
+            &:hover .paramIcon {
+                display: block
+            }
+        }
+        &:last-of-type {
+            width: 20px;
+            vertical-align: middle!important;
+        }
+    }
+    .paramIcon {
+        right: -2px;
+        top: 0px;
+        bottom: 0px;
+        display: none;
+    }
+}
+.showParamIcon{
+    .paramIcon {
+        right: 12px;
+        top: 0px;
+        bottom: 0px;
+        display: none;
+    }
+    &:hover .paramIcon{display:block;}
+
+}
+.Price {
+    display: inline-block;
+    position: relative;
+    .paramIcon {
+        right: -25px;
+        top: -10px;
+        bottom: 0px;
+    }
+}
+.paramIcon{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: grey;
+    color: white;
+    border-radius: 100px;
+    position: absolute;
+    margin: auto;
+    right: 43px;
+    bottom: 9px;
+    &:hover {
+        display: inline;
+        width: auto;
+        height: 2em;
+        line-height: 2em;
+        padding: 0px 5px;
+        border-radius: 0px;
+        i{
+            &:first-of-type {
+                display: none;
+            }
+            &:last-of-type {
+                display: inline;
+            }
+        }
+    }
+    i:last-of-type {
+        display: none;
+    }
+}
+.redLine{
+    background-color: rgba(255, 0, 0, 0.35);;
+}
+
+.imgDescrInner {
+    position: fixed;
+    opacity: 0;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    font-size:14px;
+    font-family: "Times New Roman";
+    html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td,
+    del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+    dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+      vertical-align: baseline;
+      font-weight: inherit;
+      font-style: inherit;
+      outline: 0;
+      border: 0;
+      font-size:100%;
+      word-wrap: normal;
+      word-break: normal;
+      word-spacing: inherit;
+      }
+    /* remember to define focus styles! */
+    &:focus {
+      outline: 0;
+      }
+    body {
+      background: white;
+      line-height: 1;
+      color: black;
+      }
+    ol, ul {
+      list-style: none;
+      }
+    /* tables still need cellspacing="0" in the markup */
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      }
+    caption, th, td {
+      font-weight: normal;
+      text-align: left;
+      }
+    /* remove possible quote marks (") from <q> & <blockquote> */
+    blockquote:before, blockquote:after, q:before, q:after {
+      content: "";
+      }
+    blockquote, q {
+      quotes: "" "";
+      }
+
+}
+.imgDescrBlock{
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+}
+
+
+@media all and (min-width: 1100px) {
+    .muLangCustom {
+        min-height: 180px;
+        textarea {
+            max-height: 110px;
+        }
+    }
+}
+@media all and (max-width:1100px) and (min-width: 950px) {
+    .muLangCustom {
+        font-size: 0.9em;
+        min-height: 180px;
+        textarea {
+            max-height: 100px;
+        }
+    }
+}
+
+.minimize{
+    font-size: 12px;
+    .Select--multi.has-value{
+         .Select-input{
+                margin-top: 8px;
+         }
+    }
+    .Select-menu-outer{
+        .Select-menu{
+              .Select-option{
+                  color:black;
+              }
+         }
+    }
+    .btn,
+    .form-control,
+    .Select-input input,
+    .input-group-addon,
+    .button,
+    .well,
+    .list-group-item,
+    .react-autosuggest__container .react-autosuggest__input,
+    .Select-menu-outer .Select-menu .Select-option,
+    .react-autosuggest__suggestion{
+        padding-top:0px!important;
+        padding-bottom: 0px!important;
+        font-size: inherit;
+    }
+    .panel-heading{
+        padding-top:3px;
+        padding-bottom: 3px;
+    }
+    .panel-title {
+        font-size:inherit;
+    }
+    input.form-control,button.form-control,.input-group-addon,.ParamBlock, .ParamBlock img {
+        height: 21px;
+        line-height: 1em;
+        font-size: inherit;
+    }
+    .table > thead > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > th,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > th,
+    .table > tfoot > tr > td{
+        padding: 0px 6px;
+    }
+    .nav > li > a {
+        padding: 0px 15px;
+    }
+    .multi_wrapper{
+        padding: 5px;
+        box-shadow: 0px 0px 3px 1px #cccccc;
+        margin-bottom: 15px;
+    }
+    .Select-control,
+    .Select-input,
+    .react-autosuggest__container .react-autosuggest__input,
+    .react-autosuggest__suggestion
+    {
+        height:22px;
+    }
+    .Select-placeholder, .Select--single > .Select-control .Select-value,.Select-value-label{
+        line-height: 21px;
+    }
+    .table,.form-group{margin-bottom:0px}
+    .panel-group,.panel-default{margin-bottom:10px}
+    .input-group .input-group-btn input[type='button']{font-size:14px}
+    .react-autosuggest__suggestions-container{top:21px}
+    hr{margin-top:0px}
+    .navbar-default{
+        min-height: 20px;
+        width: 220px;
+    }
+    .nav > li.active > a{background-color: mistyrose!important;}
+    .panel-heading{
+        padding-top:5px!important;
+        padding-bottom: 5px!important;
+        font-size: 1.1em;
+    }
+    .imagesTable{
+        a{
+            position: absolute;
+            display: block;
+            width: 15px;
+            height: 15px;
+            font-size: 22px;
+            text-align: center;
+            line-height: 15px;
+            text-decoration: none;
+            color: #666;
+            cursor: pointer;
+            font-family: VC-Icons;
+            &:after{
+                display: inline-block;
+                font-weight: normal;
+            }
+            &:hover{color:red}
+            &.deleteBtnClick {
+                bottom: 30px;
+                right: 6px;
+                transform: rotate(45deg);
+                background: url(/images/react/plus.png)no-repeat 50%/100%;
+            }
+            &.addNewBtnClick {
+                bottom: 9px;
+                right: 6px;
+                background: url(/images/react/plus.png)no-repeat 50%/100%;
+            }
+            &.descrBtnClick {
+                bottom: 75px;
+                right: 8px;
+                font-size: 17px;
+                &:after{
+                    width:18px;
+                    height: 18px;
+                    content:'';
+                    display:block;
+                    background: url(/images/react/mulang.png)no-repeat 50%/85%;
+                }
+            }
+            &.descrSubBtnClick {
+                bottom: 52px;
+                right: 10px;
+                &:after{
+                    content:"\e913";
+                    display:block;
+                }
+            }
+        }
+        .imageColumnHeader {
+            position: relative;
+            span {
+                width: 80%;
+                font-size: 0.9em;
+                display: inline-block;
+            }
+        }
+        .dimRadioBlock {
+            position: absolute;
+            bottom: 78px;
+            right: 34px;
+            left: 9px;
+            span {
+                float: left
+            }
+            input {
+                float: right
+            }
+        }
+        th{
+            vertical-align: top!important;
+            &:not(:first-of-type) {
+                width: 30%;
+            }
+            &>.deleteBtnClick {
+                position: absolute;
+                top: 1px;
+                right: 10px;
+            }
+        }
+        td{
+            label {
+                color: white;
+            }
+            &:first-of-type{
+                & > div a{
+                    width:27px;
+                    height: 27px;
+                    border: 1px solid black;
+                    border-radius: 100px;
+                    font-size: 32px;
+                    line-height: 25px;
+                    &.inactiveBtnClick{
+                        top: 22px;
+                        left: 33px;
+                        color: #860000;
+                        font-weight: bold;
+                        background: url(/images/react/eye.png)no-repeat 50%/85%;
+                    }
+                    &.hideInShopBtnClick {
+                        top: 22px;
+                        left: 64px;
+                        font-weight: bold;
+                        color: #860000;
+                        background: url(/images/react/store.png)no-repeat 50%/79%;
+                    }
+                    &.deleteBtnClick {
+                        top: 22px;
+                        left: 3px;
+                        text-align: left;
+                    }
+                }
+                position: relative;
+                padding: 4px!important;
+            }
+            vertical-align:top!important;
+        }
+    }
+    .icons_block {
+        .input-group-addon{
+            input{
+                margin-top: 3px;
+            }
+            display: inline-block;
+            text-align: left;
+            padding: 4px;
+            line-height: inherit!important;
+            &:last-of-type{
+                overflow: hidden;
+            }
+            &:first-of-type{
+                line-height: 24px!important;
+                width: 20px!important;
+            }
+        }
+    }
+}

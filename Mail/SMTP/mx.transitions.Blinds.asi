@@ -1,0 +1,18 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.Blinds extends mx.transitions.Transition
+{
+   public function Blinds(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private var _dimension:Number;
+   private function _initMask():Void;
+   private var _innerMask:MovieClip;
+   private var _mask:MovieClip;
+   private var _numStrips:Number;
+   private function _render(p:Number):Void;
+   public var className:String;
+   public function cleanUp():Void;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public function start():Void;
+   public var type:Object;
+};

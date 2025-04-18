@@ -1,0 +1,36 @@
+{
+    "name": "besimple/wsdl2php",
+    "type": "library",
+    "description": "BeSimple WSDL 2 PHP library",
+    "keywords": [ "soap", "wsdl", "wsdl2php" ],
+    "homepage": "http://besim.pl",
+    "authors": [
+        {
+            "name": "Francis Besset",
+            "email": "francis.besset@gmail.com"
+        },
+        {
+            "name": "Christian Kerl",
+            "email": "christian-kerl@web.de"
+        },
+        {
+            "name": "Andreas Schamberger",
+            "email": "mail@andreass.net"
+        },
+        {
+            "name": "Ton Sharp",
+            "email": "info@66ton99.org.ua"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "besimple/soap-common": "dev-master"
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+       "psr-0": { "BeSimple\\WsdlToPhp": "src/" }
+    },
+    "minimum-stability": "dev"
+}

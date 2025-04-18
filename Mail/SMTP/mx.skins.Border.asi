@@ -1,0 +1,13 @@
+import mx.core.UIObject;
+
+intrinsic class mx.skins.Border extends mx.core.UIObject
+{
+   public function Border();
+   public var borderStyle:String;
+   public var className:String;
+   public var idNames:Array;
+   public function init(Void):Void;
+   static var symbolName:String;
+   static var symbolOwner:Object;
+   public var tagBorder:Number;
+};

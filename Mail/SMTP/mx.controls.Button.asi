@@ -1,0 +1,73 @@
+import mx.core.UIObject;
+import mx.controls.SimpleButton;
+import mx.core.UIComponent;
+
+[Event("click")] 
+[TagName("Button")] 
+[IconFile("Button.png")] 
+intrinsic class mx.controls.Button extends mx.controls.SimpleButton
+{
+   public function Button();
+   public var __get__icon:Function;
+   public var __get__label:Function;
+   public var __get__labelPlacement:Function;
+   public var __label:String;
+   public var __labelPlacement:String;
+   public var _color;
+   public function _getIcon(Void):String;
+   public var _iconLinkageName:String;
+   [Bindable] [ChangeEvent("click")] public var _inherited_selected:Boolean;
+   public function _setIcon(linkage):Void;
+   public var borderW:Number;
+   public var btnOffset:Number;
+   public function calcSize(tag:Number, ref:Object):Void;
+   public var centerContent:Boolean;
+   public var className:String;
+   public var clipParameters:Object;
+   public function createChildren(Void):Void;
+   public function draw();
+   public var falseDisabledIcon:String;
+   public var falseDisabledSkin:String;
+   public var falseDownIcon:String;
+   public var falseDownSkin:String;
+   public var falseOverIcon:String;
+   public var falseOverSkin:String;
+   public var falseUpIcon:String;
+   public var falseUpSkin:String;
+   public function getBtnOffset(Void):Number;
+   public function getLabel(Void):String;
+   public function getLabelPlacement(Void):String;
+   public var hitArea_mc:MovieClip;
+   function get icon():String;
+   [Inspectable(defaultValue="")] function set icon(linkage);
+   public function init(Void):Void;
+   public var initIcon;
+   public function invalidateStyle(c:String):Void;
+   [Inspectable(defaultValue="Button")] function set label(lbl:String);
+   function get label():String;
+   public var labelPath:Object;
+   [Inspectable(enumeration="left,right,top,bottom"defaultValue="right")] function set labelPlacement(val:String);
+   function get labelPlacement():String;
+   static var mergedClipParameters:Boolean;
+   public function onRelease(Void):Void;
+   public function setColor(c:Number):Void;
+   public function setEnabled(enable:Boolean):Void;
+   public function setHitArea(w:Number, h:Number);
+   public function setLabel(label:String):Void;
+   public function setLabelPlacement(val:String):Void;
+   public function setSkin(tag:Number, linkageName:String, initobj:Object):MovieClip;
+   public function setView(offset:Number):Void;
+   public function size(Void):Void;
+   static var symbolName:String;
+   static var symbolOwner;
+   public var trueDisabledIcon:String;
+   public var trueDisabledSkin:String;
+   public var trueDownIcon:String;
+   public var trueDownSkin:String;
+   public var trueOverIcon:String;
+   public var trueOverSkin:String;
+   public var trueUpIcon:String;
+   public var trueUpSkin:String;
+   static var version:String;
+   public function viewSkin(varName:String):Void;
+};

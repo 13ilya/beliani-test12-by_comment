@@ -1,0 +1,19 @@
+import mx.skins.RectBorder;
+import mx.core.ext.UIObjectExtensions;
+import mx.skins.SkinElement;
+
+intrinsic class mx.skins.halo.ButtonSkin extends mx.skins.RectBorder
+{
+   public function ButtonSkin();
+   static var UIObjectExtensionsDependency;
+   public var backgroundColorName;
+   static function classConstruct():Boolean;
+   static var classConstructed:Boolean;
+   public var className;
+   public function drawHaloRect(w:Number, h:Number):Void;
+   public var drawRoundRect:Function;
+   public function init():Void;
+   public function size():Void;
+   static var symbolName:String;
+   static var symbolOwner:Object;
+};

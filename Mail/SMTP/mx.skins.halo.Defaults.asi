@@ -1,0 +1,20 @@
+import mx.core.UIObject;
+import mx.core.ext.UIObjectExtensions;
+import mx.styles.CSSStyleDeclaration;
+
+intrinsic class mx.skins.halo.Defaults
+{
+   static var CSSStyleDeclarationDependency;
+   static var UIObjectDependency;
+   static var UIObjectExtensionsDependency;
+   public var beginFill:Function;
+   public var beginGradientFill:Function;
+   static function classConstruct():Boolean;
+   static var classConstructed;
+   public var curveTo:Function;
+   public function drawRoundRect(x, y, w, h, r, c, alpha, rot, gradient, ratios);
+   public var endFill:Function;
+   public var lineTo:Function;
+   public var moveTo:Function;
+   static function setThemeDefaults():Void;
+};

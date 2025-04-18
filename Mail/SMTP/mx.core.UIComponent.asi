@@ -1,0 +1,46 @@
+import mx.core.UIObject;
+import mx.skins.SkinElement;
+
+[Event("focusIn")] 
+[Event("focusOut")] 
+[Event("keyDown")] 
+[Event("keyUp")] 
+intrinsic class mx.core.UIComponent extends mx.core.UIObject
+{
+   public function UIComponent();
+   public var clipParameters:Object;
+   public function dispatchValueChangedEvent(value):Void;
+   public var drawFocus:Function;
+   [Inspectable(defaultValue=true, verbose=1, category="Other")] public var enabled:Boolean;
+   public function enabledChanged(id:String, oldValue:Boolean, newValue:Boolean):Boolean;
+   public function findFocusFromObject(o:Object):Object;
+   public function findFocusInChildren(o:Object):Object;
+   public var focusEnabled:Boolean;
+   public var focusManager:MovieClip;
+   public var focusTextField:Object;
+   public function getFocus():Object;
+   public function getFocusManager():Object;
+   public var groupName:String;
+   function get height():Number;
+   public function init():Void;
+   public function isParent(o:Object):Boolean;
+   static var kStretch:Number;
+   static var mergedClipParameters:Boolean;
+   public function onKillFocus(newFocus:Object):Void;
+   public function onSetFocus(oldFocus:Object):Void;
+   public var origBorderStyles:Object;
+   public var origBorderValues:Object;
+   public var popUp:Boolean;
+   public function pressFocus():Void;
+   public function releaseFocus():Void;
+   public function setEnabled(enabled:Boolean):Void;
+   public function setFocus():Void;
+   public function setVisible(x:Boolean, noEvent:Boolean):Void;
+   public function size():Void;
+   static var symbolName:String;
+   static var symbolOwner:Object;
+   public var tabEnabled:Boolean;
+   public var tabIndex:Number;
+   static var version:String;
+   function get width():Number;
+};

@@ -1,0 +1,44 @@
+import mx.core.UIObject;
+
+[TagName("Label")] 
+[IconFile("Label.png")] 
+intrinsic class mx.controls.Label extends mx.core.UIObject
+{
+   public function Label();
+   public var __autoSize:String;
+   public var __get__autoSize:Function;
+   public var __get__html:Function;
+   public var __get__styleSheet:Function;
+   public var __get__text:Function;
+   public var _color;
+   public function adjustForAutoSize();
+   [Inspectable(enumeration="left,right",defaultValue="none")] function get autoSize():String;
+   function set autoSize(v:String):Void;
+   public var className:String;
+   public var clipParameters:Object;
+   public function draw(Void):Void;
+   public function getHtml():Boolean;
+   public function getText():String;
+   [Inspectable(defaultValue=false)] function get html():Boolean;
+   function set html(value:Boolean):Void;
+   public function init(Void):Void;
+   public var initText:String;
+   public var initializing:Boolean;
+   public var labelField:TextField;
+   static var mergedClipParameters:Boolean;
+   public function setColor(col:Number):Void;
+   public function setEnabled(enable:Boolean):Void;
+   public function setHtml(value:Boolean):Void;
+   public function setText(t:String):Void;
+   public function size(Void):Void;
+   function get styleSheet():TextField.StyleSheet;
+   function set styleSheet(v:TextField.StyleSheet):Void;
+   static var symbolName:String;
+   static var symbolOwner:Object;
+   public var tabChildren:Boolean;
+   public var tabEnabled:Boolean;
+   [Inspectable(defaultValue="Label")] [Bindable("writeonly")] function get text():String;
+   function set text(t:String):Void;
+   public var useHandCursor:Boolean;
+   static var version:String;
+};

@@ -1,0 +1,25 @@
+import mx.core.UIObject;
+import mx.events.EventDispatcher;
+
+intrinsic class mx.events.UIEventDispatcher extends mx.events.EventDispatcher
+{
+   public function __addEventListener(event:String, handler):Void;
+   public var __origAddEventListener:Function;
+   public var __sentLoadEvent;
+   static var _fEventDispatcher:mx.events.UIEventDispatcher;
+   static function addKeyEvents(obj:Object):Void;
+   static function addLoadEvents(obj:Object):Void;
+   public function dispatchEvent(eventObj:Object):Void;
+   static function initialize(obj:Object):Void;
+   static var keyEvents:Object;
+   static var loadEvents:Object;
+   static var lowLevelEvents:Object;
+   public function onKeyDown(Void):Void;
+   public function onKeyUp(Void):Void;
+   public function onLoad(Void):Void;
+   public function onUnload(Void):Void;
+   public var owner:Object;
+   public function removeEventListener(event:String, handler):Void;
+   static function removeKeyEvents(obj:Object):Void;
+   static function removeLoadEvents(obj:Object):Void;
+};

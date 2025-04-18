@@ -1,0 +1,22 @@
+.popup{
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    width: 72%;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+}
+.pupupInner:not(.Possib) .popup{height: 110px; background-color: gainsboro;}
+.pupupInner{
+    position:fixed;
+    background-color:rgba(33, 33, 33, 0.5);
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index: 200;
+    display: none;
+}

@@ -1,0 +1,13 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.Squeeze extends mx.transitions.Transition
+{
+   public function Squeeze(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private function _render(p:Number):Void;
+   private var _scaleFinal:Number;
+   private var _scaleProp:String;
+   public var className:String;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public var type:Object;
+};

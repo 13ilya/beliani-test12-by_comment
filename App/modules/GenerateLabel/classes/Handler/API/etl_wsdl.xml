@@ -1,0 +1,2152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="GService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+                  xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+                  xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+                  xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+                  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/"
+                  xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+    <wsdl:types>
+        <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:import namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+            <xs:element name="ServiceList">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q1:RequestOfServiceRequestHUsxwOXq"
+                                    xmlns:q1="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ServiceListResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="ServiceListResult" nillable="true"
+                                    type="q2:ResponseOfServiceRequestArrayOfServicepMtQ0fwN"
+                                    xmlns:q2="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="AddServiceList">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q3:RequestOfAddServiceRequestHUsxwOXq"
+                                    xmlns:q3="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="AddServiceListResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AddServiceListResult" nillable="true"
+                                    type="q4:ResponseOfAddServiceRequestArrayOfAddServicepMtQ0fwN"
+                                    xmlns:q4="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="StatusList">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q5:RequestOfStatusRequestHUsxwOXq"
+                                    xmlns:q5="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="StatusListResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="StatusListResult" nillable="true"
+                                    type="q6:ResponseOfStatusRequestArrayOfStatuspMtQ0fwN"
+                                    xmlns:q6="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="WrapList">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true" type="q7:RequestOfWrapRequestHUsxwOXq"
+                                    xmlns:q7="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="WrapListResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="WrapListResult" nillable="true"
+                                    type="q8:ResponseOfWrapRequestArrayOfWrappMtQ0fwN"
+                                    xmlns:q8="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DeliveryRouting">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q9:RequestOfDeliveryRoutingRequestHUsxwOXq"
+                                    xmlns:q9="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DeliveryRoutingResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="DeliveryRoutingResult" nillable="true"
+                                    type="q10:ResponseOfDeliveryRoutingRequestDeliveryRoutingpMtQ0fwN"
+                                    xmlns:q10="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ShipmentDetail">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q11:RequestOfShipmentReqeustHUsxwOXq"
+                                    xmlns:q11="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ShipmentDetailResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="ShipmentDetailResult" nillable="true"
+                                    type="q12:ResponseOfShipmentReqeustShipmentpMtQ0fwN"
+                                    xmlns:q12="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RouteTable">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q13:RequestOfRouteTableRequestHUsxwOXq"
+                                    xmlns:q13="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RouteTableResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="RouteTableResult" nillable="true"
+                                    type="q14:ResponseOfRouteTableRequestArrayOfRouteTablepMtQ0fwN"
+                                    xmlns:q14="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CreatePickUp">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q15:RequestOfPickUpRequestHUsxwOXq"
+                                    xmlns:q15="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CreatePickUpResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="CreatePickUpResult" nillable="true"
+                                    type="q16:ResponseOfPickUpRequestPickUppMtQ0fwN"
+                                    xmlns:q16="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InsertExport">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q17:RequestOfExportRequestHUsxwOXq"
+                                    xmlns:q17="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InsertExportResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="InsertExportResult" nillable="true"
+                                    type="q18:ResponseOfExportRequestExportpMtQ0fwN"
+                                    xmlns:q18="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InsertOrder">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q19:RequestOfOrderRequestHUsxwOXq"
+                                    xmlns:q19="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InsertOrderResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="InsertOrderResult" nillable="true"
+                                    type="q20:ResponseOfOrderRequestOrderpMtQ0fwN"
+                                    xmlns:q20="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="AssignRange">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q21:RequestOfRangeRequestHUsxwOXq"
+                                    xmlns:q21="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="AssignRangeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AssignRangeResult" nillable="true"
+                                    type="q22:ResponseOfRangeRequestRangepMtQ0fwN"
+                                    xmlns:q22="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="IsHealthy">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="IsHealthyResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="IsHealthyResult" nillable="true" type="q23:HealhtyResponse"
+                                    xmlns:q23="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetCurrencies">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetCurrenciesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="GetCurrenciesResult" nillable="true" type="q24:ArrayOfCurrency"
+                                    xmlns:q24="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetLabel">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q25:RequestOfLabelRequestHUsxwOXq"
+                                    xmlns:q25="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetLabelResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="GetLabelResult" nillable="true"
+                                    type="q26:ResponseOfLabelRequestLabelResponsepMtQ0fwN"
+                                    xmlns:q26="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ListOfShipments">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q27:RequestOfShipmentRequestHUsxwOXq"
+                                    xmlns:q27="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ListOfShipmentsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="ListOfShipmentsResult" nillable="true"
+                                    type="q28:ResponseOfShipmentRequestArrayOfShipmentResponsepMtQ0fwN"
+                                    xmlns:q28="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ShipmentStatus">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q29:RequestOfShipmentStatusRequestHUsxwOXq"
+                                    xmlns:q29="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ShipmentStatusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="ShipmentStatusResult" nillable="true"
+                                    type="q30:ResponseOfShipmentStatusRequestArrayOfShipmentStatusResponsepMtQ0fwN"
+                                    xmlns:q30="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPickupList">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q31:RequestOfPickupListRequestHUsxwOXq"
+                                    xmlns:q31="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPickupListResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="GetPickupListResult" nillable="true"
+                                    type="q32:ResponseOfPickupListRequestPickupListResponsepMtQ0fwN"
+                                    xmlns:q32="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DeleteShipment">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Request" nillable="true"
+                                    type="q33:RequestOfDeleteShipmentRequestHUsxwOXq"
+                                    xmlns:q33="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DeleteShipmentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="DeleteShipmentResult" nillable="true"
+                                    type="q34:ResponseOfDeleteShipmentRequestDeleteShipmentResponsepMtQ0fwN"
+                                    xmlns:q34="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified"
+                   targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+            <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+            <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+            <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+            <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+            <xs:element name="byte" nillable="true" type="xs:byte"/>
+            <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+            <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+            <xs:element name="double" nillable="true" type="xs:double"/>
+            <xs:element name="float" nillable="true" type="xs:float"/>
+            <xs:element name="int" nillable="true" type="xs:int"/>
+            <xs:element name="long" nillable="true" type="xs:long"/>
+            <xs:element name="QName" nillable="true" type="xs:QName"/>
+            <xs:element name="short" nillable="true" type="xs:short"/>
+            <xs:element name="string" nillable="true" type="xs:string"/>
+            <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+            <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+            <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+            <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+            <xs:element name="char" nillable="true" type="tns:char"/>
+            <xs:simpleType name="char">
+                <xs:restriction base="xs:int"/>
+            </xs:simpleType>
+            <xs:element name="duration" nillable="true" type="tns:duration"/>
+            <xs:simpleType name="duration">
+                <xs:restriction base="xs:duration">
+                    <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+                    <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+                    <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="guid" nillable="true" type="tns:guid"/>
+            <xs:simpleType name="guid">
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:attribute name="FactoryType" type="xs:QName"/>
+            <xs:attribute name="Id" type="xs:ID"/>
+            <xs:attribute name="Ref" type="xs:IDREF"/>
+        </xs:schema>
+        <xs:schema elementFormDefault="qualified"
+                   targetNamespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:tns="http://schemas.datacontract.org/2004/07/GService.Manager">
+            <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+            <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+            <xs:complexType name="RequestOfServiceRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ServiceRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:ServiceRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfServiceRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfServiceRequestHUsxwOXq"/>
+            <xs:complexType name="RequestHeader">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CustomerCode" nillable="true" type="xs:string"/>
+                    <xs:element name="Language" type="tns:Language"/>
+                    <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestHeader" nillable="true" type="tns:RequestHeader"/>
+            <xs:simpleType name="Language">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="CZ">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1
+                                </EnumerationValue>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="SK">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2
+                                </EnumerationValue>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="EN">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3
+                                </EnumerationValue>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="DE">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4
+                                </EnumerationValue>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="PL">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5
+                                </EnumerationValue>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="Language" nillable="true" type="tns:Language"/>
+            <xs:complexType name="ServiceRequest">
+                <xs:sequence/>
+            </xs:complexType>
+            <xs:element name="ServiceRequest" nillable="true" type="tns:ServiceRequest"/>
+            <xs:complexType name="ResponseOfServiceRequestArrayOfServicepMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ServiceRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="ArrayOfService"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true"
+                                type="tns:RequestOfServiceRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:ArrayOfService"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfServiceRequestArrayOfServicepMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfServiceRequestArrayOfServicepMtQ0fwN"/>
+            <xs:complexType name="ArrayOfService">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="Service" nillable="true" type="tns:Service"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfService" nillable="true" type="tns:ArrayOfService"/>
+            <xs:complexType name="Service">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Service" nillable="true" type="tns:Service"/>
+            <xs:simpleType name="ResponseStatus">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Inserted"/>
+                    <xs:enumeration value="Deleted"/>
+                    <xs:enumeration value="Updated"/>
+                    <xs:enumeration value="ErrorOccurred"/>
+                    <xs:enumeration value="AccessDenied"/>
+                    <xs:enumeration value="Processed"/>
+                    <xs:enumeration value="NoDataFound"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="ResponseStatus" nillable="true" type="tns:ResponseStatus"/>
+            <xs:complexType name="RequestOfAddServiceRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="AddServiceRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:AddServiceRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfAddServiceRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfAddServiceRequestHUsxwOXq"/>
+            <xs:complexType name="AddServiceRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DeliveryCountry" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Service" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="AddServiceRequest" nillable="true" type="tns:AddServiceRequest"/>
+            <xs:complexType name="ResponseOfAddServiceRequestArrayOfAddServicepMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="AddServiceRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="ArrayOfAddService"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true"
+                                type="tns:RequestOfAddServiceRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:ArrayOfAddService"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfAddServiceRequestArrayOfAddServicepMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfAddServiceRequestArrayOfAddServicepMtQ0fwN"/>
+            <xs:complexType name="ArrayOfAddService">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="AddService" nillable="true"
+                                type="tns:AddService"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfAddService" nillable="true" type="tns:ArrayOfAddService"/>
+            <xs:complexType name="AddService">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Abbreviation" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Service" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ZipCodesList" nillable="true" type="tns:ArrayOfZipCodes"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="AddService" nillable="true" type="tns:AddService"/>
+            <xs:complexType name="ArrayOfZipCodes">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ZipCodes" nillable="true"
+                                type="tns:ZipCodes"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfZipCodes" nillable="true" type="tns:ArrayOfZipCodes"/>
+            <xs:complexType name="ZipCodes">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ZipCodeFrom" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ZipCodeTo" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ZipCodes" nillable="true" type="tns:ZipCodes"/>
+            <xs:complexType name="RequestOfStatusRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="StatusRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:StatusRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfStatusRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfStatusRequestHUsxwOXq"/>
+            <xs:complexType name="StatusRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="StatusRequest" nillable="true" type="tns:StatusRequest"/>
+            <xs:complexType name="ResponseOfStatusRequestArrayOfStatuspMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="StatusRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="ArrayOfStatus"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true" type="tns:RequestOfStatusRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:ArrayOfStatus"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfStatusRequestArrayOfStatuspMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfStatusRequestArrayOfStatuspMtQ0fwN"/>
+            <xs:complexType name="ArrayOfStatus">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="Status" nillable="true" type="tns:Status"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfStatus" nillable="true" type="tns:ArrayOfStatus"/>
+            <xs:complexType name="Status">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Status" nillable="true" type="tns:Status"/>
+            <xs:complexType name="RequestOfWrapRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="WrapRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:WrapRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfWrapRequestHUsxwOXq" nillable="true" type="tns:RequestOfWrapRequestHUsxwOXq"/>
+            <xs:complexType name="WrapRequest">
+                <xs:sequence/>
+            </xs:complexType>
+            <xs:element name="WrapRequest" nillable="true" type="tns:WrapRequest"/>
+            <xs:complexType name="ResponseOfWrapRequestArrayOfWrappMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="WrapRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="ArrayOfWrap"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true" type="tns:RequestOfWrapRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:ArrayOfWrap"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfWrapRequestArrayOfWrappMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfWrapRequestArrayOfWrappMtQ0fwN"/>
+            <xs:complexType name="ArrayOfWrap">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="Wrap" nillable="true" type="tns:Wrap"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfWrap" nillable="true" type="tns:ArrayOfWrap"/>
+            <xs:complexType name="Wrap">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Returnable" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Wrap" nillable="true" type="tns:Wrap"/>
+            <xs:complexType name="RequestOfDeliveryRoutingRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="DeliveryRoutingRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:DeliveryRoutingRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfDeliveryRoutingRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfDeliveryRoutingRequestHUsxwOXq"/>
+            <xs:complexType name="DeliveryRoutingRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CountryIn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CountryOut" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                    <xs:element minOccurs="0" name="TemperatureMode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ZipCodeIn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ZipCodeOut" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="DeliveryRoutingRequest" nillable="true" type="tns:DeliveryRoutingRequest"/>
+            <xs:complexType name="ResponseOfDeliveryRoutingRequestDeliveryRoutingpMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="DeliveryRoutingRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="DeliveryRouting"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true"
+                                type="tns:RequestOfDeliveryRoutingRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:DeliveryRouting"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfDeliveryRoutingRequestDeliveryRoutingpMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfDeliveryRoutingRequestDeliveryRoutingpMtQ0fwN"/>
+            <xs:complexType name="DeliveryRouting">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DeliveryRoute" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DepCode" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="DeliveryRouting" nillable="true" type="tns:DeliveryRouting"/>
+            <xs:complexType name="RequestOfShipmentReqeustHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ShipmentReqeust"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:ShipmentReqeust"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfShipmentReqeustHUsxwOXq" nillable="true"
+                        type="tns:RequestOfShipmentReqeustHUsxwOXq"/>
+            <xs:complexType name="ShipmentReqeust">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ShipmentReqeust" nillable="true" type="tns:ShipmentReqeust"/>
+            <xs:complexType name="ResponseOfShipmentReqeustShipmentpMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ShipmentReqeust"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="Shipment"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true"
+                                type="tns:RequestOfShipmentReqeustHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:Shipment"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfShipmentReqeustShipmentpMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfShipmentReqeustShipmentpMtQ0fwN"/>
+            <xs:complexType name="Shipment">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BorderDate" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="CodValue" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CodVarCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ColliHistory" nillable="true" type="tns:ArrayOfColliHistory"/>
+                    <xs:element minOccurs="0" name="DelivDate" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="DelivPerson" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="History" nillable="true" type="tns:ArrayOfPackageHistory"/>
+                    <xs:element minOccurs="0" name="RecAddress" nillable="true" type="tns:Address"/>
+                    <xs:element minOccurs="0" name="Rows" nillable="true" type="tns:ArrayOfPackageRow"/>
+                    <xs:element minOccurs="0" name="SendAddress" nillable="true" type="tns:Address"/>
+                    <xs:element minOccurs="0" name="Services" nillable="true" type="tns:ArrayOfPackageService"/>
+                    <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ShipmentNumberCust" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Volume" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Shipment" nillable="true" type="tns:Shipment"/>
+            <xs:complexType name="ArrayOfColliHistory">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ColliHistory" nillable="true"
+                                type="tns:ColliHistory"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfColliHistory" nillable="true" type="tns:ArrayOfColliHistory"/>
+            <xs:complexType name="ColliHistory">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ColliNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DepName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StatusDate" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ColliHistory" nillable="true" type="tns:ColliHistory"/>
+            <xs:complexType name="ArrayOfPackageHistory">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="PackageHistory" nillable="true"
+                                type="tns:PackageHistory"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfPackageHistory" nillable="true" type="tns:ArrayOfPackageHistory"/>
+            <xs:complexType name="PackageHistory">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DepName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StatusDate" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="PackageHistory" nillable="true" type="tns:PackageHistory"/>
+            <xs:complexType name="Address">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Name2" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Address" nillable="true" type="tns:Address"/>
+            <xs:complexType name="ArrayOfPackageRow">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="PackageRow" nillable="true"
+                                type="tns:PackageRow"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfPackageRow" nillable="true" type="tns:ArrayOfPackageRow"/>
+            <xs:complexType name="PackageRow">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CountItems" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Dimensions" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PackingType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Volume" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="PackageRow" nillable="true" type="tns:PackageRow"/>
+            <xs:complexType name="ArrayOfPackageService">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="PackageService" nillable="true"
+                                type="tns:PackageService"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfPackageService" nillable="true" type="tns:ArrayOfPackageService"/>
+            <xs:complexType name="PackageService">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Currency" type="tns:Currency"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Price" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="PackageService" nillable="true" type="tns:PackageService"/>
+            <xs:simpleType name="Currency">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="UND"/>
+                    <xs:enumeration value="CZK"/>
+                    <xs:enumeration value="EUR"/>
+                    <xs:enumeration value="CHF">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1000001
+                                </EnumerationValue>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="USD">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1000002
+                                </EnumerationValue>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="PLN">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1000003
+                                </EnumerationValue>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="HUF">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1000004
+                                </EnumerationValue>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="Currency" nillable="true" type="tns:Currency"/>
+            <xs:complexType name="RequestOfRouteTableRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="RouteTableRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:RouteTableRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfRouteTableRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfRouteTableRequestHUsxwOXq"/>
+            <xs:complexType name="RouteTableRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ValidDate" type="xs:dateTime"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RouteTableRequest" nillable="true" type="tns:RouteTableRequest"/>
+            <xs:complexType name="ResponseOfRouteTableRequestArrayOfRouteTablepMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="RouteTableRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="ArrayOfRouteTable"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true"
+                                type="tns:RequestOfRouteTableRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:ArrayOfRouteTable"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfRouteTableRequestArrayOfRouteTablepMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfRouteTableRequestArrayOfRouteTablepMtQ0fwN"/>
+            <xs:complexType name="ArrayOfRouteTable">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="RouteTable" nillable="true"
+                                type="tns:RouteTable"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfRouteTable" nillable="true" type="tns:ArrayOfRouteTable"/>
+            <xs:complexType name="RouteTable">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Depot" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Route" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ValidDate" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="ZipCodes" nillable="true" type="tns:ZipCodes"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RouteTable" nillable="true" type="tns:RouteTable"/>
+            <xs:complexType name="RequestOfPickUpRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="PickUpRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:PickUpRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfPickUpRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfPickUpRequestHUsxwOXq"/>
+            <xs:complexType name="PickUpRequest">
+                <xs:sequence>
+                    <xs:element name="Contact" nillable="true" type="tns:Contact"/>
+                    <xs:element minOccurs="0" name="CountItems" type="xs:int"/>
+                    <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PickUpItems" nillable="true" type="tns:ArrayOfPickUpItem"/>
+                    <xs:element minOccurs="0" name="TemperatureMode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="TotalWeight" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="PickUpRequest" nillable="true" type="tns:PickUpRequest"/>
+            <xs:complexType name="Contact">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Contact" nillable="true" type="tns:Contact"/>
+            <xs:complexType name="ArrayOfPickUpItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="PickUpItem" nillable="true"
+                                type="tns:PickUpItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfPickUpItem" nillable="true" type="tns:ArrayOfPickUpItem"/>
+            <xs:complexType name="PickUpItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CountItems" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="PickUpItem" nillable="true" type="tns:PickUpItem"/>
+            <xs:complexType name="ResponseOfPickUpRequestPickUppMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="PickUpRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="PickUp"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true" type="tns:RequestOfPickUpRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:PickUp"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfPickUpRequestPickUppMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfPickUpRequestPickUppMtQ0fwN"/>
+            <xs:complexType name="PickUp">
+                <xs:sequence/>
+            </xs:complexType>
+            <xs:element name="PickUp" nillable="true" type="tns:PickUp"/>
+            <xs:complexType name="RequestOfExportRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ExportRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:ExportRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfExportRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfExportRequestHUsxwOXq"/>
+            <xs:complexType name="ExportRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BurstId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="CoverAddress" nillable="true" type="tns:Address"/>
+                    <xs:element minOccurs="0" name="DeliveryAddress" nillable="true" type="tns:Address"/>
+                    <xs:element minOccurs="0" name="DeliveryContact" nillable="true" type="tns:Contact"/>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ExportItems" nillable="true" type="tns:ArrayOfExportItem"/>
+                    <xs:element minOccurs="0" name="ExportServices" nillable="true" type="tns:ArrayOfExportService"/>
+                    <xs:element minOccurs="0" name="MergedPackages" nillable="true" type="tns:ArrayOfMergedItem"/>
+                    <xs:element minOccurs="0" name="MergedShipment" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NoteDriver" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PartnerNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PickUpDate" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ExportRequest" nillable="true" type="tns:ExportRequest"/>
+            <xs:complexType name="ArrayOfExportItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ExportItem" nillable="true"
+                                type="tns:ExportItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfExportItem" nillable="true" type="tns:ArrayOfExportItem"/>
+            <xs:complexType name="ExportItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CountItems" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Dimensions" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Height" nillable="true" type="xs:double"/>
+                    <xs:element minOccurs="0" name="Length" nillable="true" type="xs:double"/>
+                    <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Volume" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="Width" nillable="true" type="xs:double"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ExportItem" nillable="true" type="tns:ExportItem"/>
+            <xs:complexType name="ArrayOfExportService">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ExportService" nillable="true"
+                                type="tns:ExportService"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfExportService" nillable="true" type="tns:ArrayOfExportService"/>
+            <xs:complexType name="ExportService">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Parameter_1" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Parameter_2" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Parameter_3" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Parameter_4" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Parameter_5" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Parameter_6" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Parameter_7" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Parameter_8" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ExportService" nillable="true" type="tns:ExportService"/>
+            <xs:complexType name="ArrayOfMergedItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="MergedItem" nillable="true"
+                                type="tns:MergedItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfMergedItem" nillable="true" type="tns:ArrayOfMergedItem"/>
+            <xs:complexType name="MergedItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="PackNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="MergedItem" nillable="true" type="tns:MergedItem"/>
+            <xs:complexType name="ResponseOfExportRequestExportpMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ExportRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="Export"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true" type="tns:RequestOfExportRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:Export"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfExportRequestExportpMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfExportRequestExportpMtQ0fwN"/>
+            <xs:complexType name="Export">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BurstId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="MergedPackNumbers" nillable="true" type="q1:ArrayOfstring"
+                                xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                    <xs:element minOccurs="0" name="PackNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Export" nillable="true" type="tns:Export"/>
+            <xs:complexType name="RequestOfOrderRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="OrderRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:OrderRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfOrderRequestHUsxwOXq" nillable="true" type="tns:RequestOfOrderRequestHUsxwOXq"/>
+            <xs:complexType name="OrderRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BurstId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="DeliveryAddress" nillable="true" type="tns:Address"/>
+                    <xs:element minOccurs="0" name="DeliveryContact" nillable="true" type="tns:Contact"/>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ExportItems" nillable="true" type="tns:ArrayOfExportItem"/>
+                    <xs:element minOccurs="0" name="ExportServices" nillable="true" type="tns:ArrayOfExportService"/>
+                    <xs:element minOccurs="0" name="MergedOrder" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="MergedOrders" nillable="true" type="tns:ArrayOfMergedItem"/>
+                    <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NoteDriver" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PickUpDate" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SenderAddress" nillable="true" type="tns:Address"/>
+                    <xs:element minOccurs="0" name="SenderContact" nillable="true" type="tns:Contact"/>
+                    <xs:element minOccurs="0" name="Volume" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="OrderRequest" nillable="true" type="tns:OrderRequest"/>
+            <xs:complexType name="ResponseOfOrderRequestOrderpMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="OrderRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="Order"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true" type="tns:RequestOfOrderRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:Order"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfOrderRequestOrderpMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfOrderRequestOrderpMtQ0fwN"/>
+            <xs:complexType name="Order">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BurstId" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="MergedPackNumbers" nillable="true" type="q2:ArrayOfstring"
+                                xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                    <xs:element minOccurs="0" name="PackNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Order" nillable="true" type="tns:Order"/>
+            <xs:complexType name="RequestOfRangeRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="RangeRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:RangeRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfRangeRequestHUsxwOXq" nillable="true" type="tns:RequestOfRangeRequestHUsxwOXq"/>
+            <xs:complexType name="RangeRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Range" type="xs:int"/>
+                    <xs:element minOccurs="0" name="TransportType" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RangeRequest" nillable="true" type="tns:RangeRequest"/>
+            <xs:complexType name="ResponseOfRangeRequestRangepMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="RangeRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="Range"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true" type="tns:RequestOfRangeRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:Range"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfRangeRequestRangepMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfRangeRequestRangepMtQ0fwN"/>
+            <xs:complexType name="Range">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="RangeHigh" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="RangeLow" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Range" nillable="true" type="tns:Range"/>
+            <xs:complexType name="HealhtyResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Created" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="HealhtyResponse" nillable="true" type="tns:HealhtyResponse"/>
+            <xs:complexType name="ArrayOfCurrency">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="Currency" type="tns:Currency"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfCurrency" nillable="true" type="tns:ArrayOfCurrency"/>
+            <xs:complexType name="RequestOfLabelRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="LabelRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:LabelRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfLabelRequestHUsxwOXq" nillable="true" type="tns:RequestOfLabelRequestHUsxwOXq"/>
+            <xs:complexType name="LabelRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DistributionChannel" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Format" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Position" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Resolution" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ShipmentNumbers" nillable="true" type="tns:ArrayOfLabelItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="LabelRequest" nillable="true" type="tns:LabelRequest"/>
+            <xs:complexType name="ArrayOfLabelItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="LabelItem" nillable="true"
+                                type="tns:LabelItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfLabelItem" nillable="true" type="tns:ArrayOfLabelItem"/>
+            <xs:complexType name="LabelItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="LabelItem" nillable="true" type="tns:LabelItem"/>
+            <xs:complexType name="ResponseOfLabelRequestLabelResponsepMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="LabelRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="LabelResponse"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true" type="tns:RequestOfLabelRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:LabelResponse"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfLabelRequestLabelResponsepMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfLabelRequestLabelResponsepMtQ0fwN"/>
+            <xs:complexType name="LabelResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="LabelData" nillable="true" type="tns:ArrayOfLabelItemData"/>
+                    <xs:element minOccurs="0" name="ShipmentNumbers" nillable="true" type="tns:ArrayOfLabelItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="LabelResponse" nillable="true" type="tns:LabelResponse"/>
+            <xs:complexType name="ArrayOfLabelItemData">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="LabelItemData" nillable="true"
+                                type="tns:LabelItemData"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfLabelItemData" nillable="true" type="tns:ArrayOfLabelItemData"/>
+            <xs:complexType name="LabelItemData">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="LabelItemData" nillable="true" type="tns:LabelItemData"/>
+            <xs:complexType name="RequestOfShipmentRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ShipmentRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:ShipmentRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfShipmentRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfShipmentRequestHUsxwOXq"/>
+            <xs:complexType name="ShipmentRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BurstId" nillable="true" type="xs:int"/>
+                    <xs:element name="DateExpOrOrder" type="xs:dateTime"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ShipmentRequest" nillable="true" type="tns:ShipmentRequest"/>
+            <xs:complexType name="ResponseOfShipmentRequestArrayOfShipmentResponsepMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ShipmentRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="ArrayOfShipmentResponse"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true"
+                                type="tns:RequestOfShipmentRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:ArrayOfShipmentResponse"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfShipmentRequestArrayOfShipmentResponsepMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfShipmentRequestArrayOfShipmentResponsepMtQ0fwN"/>
+            <xs:complexType name="ArrayOfShipmentResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ShipmentResponse" nillable="true"
+                                type="tns:ShipmentResponse"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfShipmentResponse" nillable="true" type="tns:ArrayOfShipmentResponse"/>
+            <xs:complexType name="ShipmentResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="IsOrder" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ShipmentResponse" nillable="true" type="tns:ShipmentResponse"/>
+            <xs:complexType name="RequestOfShipmentStatusRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ShipmentStatusRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:ShipmentStatusRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfShipmentStatusRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfShipmentStatusRequestHUsxwOXq"/>
+            <xs:complexType name="ShipmentStatusRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ShipmentsNumbers" nillable="true"
+                                type="tns:ArrayOfShipmentStatusItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ShipmentStatusRequest" nillable="true" type="tns:ShipmentStatusRequest"/>
+            <xs:complexType name="ArrayOfShipmentStatusItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ShipmentStatusItem" nillable="true"
+                                type="tns:ShipmentStatusItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfShipmentStatusItem" nillable="true" type="tns:ArrayOfShipmentStatusItem"/>
+            <xs:complexType name="ShipmentStatusItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ShipmentStatusItem" nillable="true" type="tns:ShipmentStatusItem"/>
+            <xs:complexType name="ResponseOfShipmentStatusRequestArrayOfShipmentStatusResponsepMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="ShipmentStatusRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="ArrayOfShipmentStatusResponse"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true"
+                                type="tns:RequestOfShipmentStatusRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true"
+                                type="tns:ArrayOfShipmentStatusResponse"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfShipmentStatusRequestArrayOfShipmentStatusResponsepMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfShipmentStatusRequestArrayOfShipmentStatusResponsepMtQ0fwN"/>
+            <xs:complexType name="ArrayOfShipmentStatusResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ShipmentStatusResponse" nillable="true"
+                                type="tns:ShipmentStatusResponse"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfShipmentStatusResponse" nillable="true" type="tns:ArrayOfShipmentStatusResponse"/>
+            <xs:complexType name="ShipmentStatusResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ShipmentStatusResponse" nillable="true" type="tns:ShipmentStatusResponse"/>
+            <xs:complexType name="RequestOfPickupListRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="PickupListRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:PickupListRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfPickupListRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfPickupListRequestHUsxwOXq"/>
+            <xs:complexType name="PickupListRequest">
+                <xs:sequence>
+                    <xs:element name="DistributionChannel" type="xs:int"/>
+                    <xs:element name="ExpeditionCreateDate" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="ShipmentsNumbers" nillable="true"
+                                type="tns:ArrayOfPickupListShipmItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="PickupListRequest" nillable="true" type="tns:PickupListRequest"/>
+            <xs:complexType name="ArrayOfPickupListShipmItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="PickupListShipmItem" nillable="true"
+                                type="tns:PickupListShipmItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfPickupListShipmItem" nillable="true" type="tns:ArrayOfPickupListShipmItem"/>
+            <xs:complexType name="PickupListShipmItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="PickupListShipmItem" nillable="true" type="tns:PickupListShipmItem"/>
+            <xs:complexType name="ResponseOfPickupListRequestPickupListResponsepMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="PickupListRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="PickupListResponse"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true"
+                                type="tns:RequestOfPickupListRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:PickupListResponse"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfPickupListRequestPickupListResponsepMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfPickupListRequestPickupListResponsepMtQ0fwN"/>
+            <xs:complexType name="PickupListResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="PickupListData" nillable="true" type="xs:base64Binary"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="PickupListResponse" nillable="true" type="tns:PickupListResponse"/>
+            <xs:complexType name="RequestOfDeleteShipmentRequestHUsxwOXq">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="RequestOf{0}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="DeleteShipmentRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Header" nillable="true" type="tns:RequestHeader"/>
+                    <xs:element name="RequestObject" nillable="true" type="tns:DeleteShipmentRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="RequestOfDeleteShipmentRequestHUsxwOXq" nillable="true"
+                        type="tns:RequestOfDeleteShipmentRequestHUsxwOXq"/>
+            <xs:complexType name="DeleteShipmentRequest">
+                <xs:sequence>
+                    <xs:element name="ShipmentsNumbers" nillable="true" type="tns:ArrayOfDeleteShipmentItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="DeleteShipmentRequest" nillable="true" type="tns:DeleteShipmentRequest"/>
+            <xs:complexType name="ArrayOfDeleteShipmentItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="DeleteShipmentItem" nillable="true"
+                                type="tns:DeleteShipmentItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfDeleteShipmentItem" nillable="true" type="tns:ArrayOfDeleteShipmentItem"/>
+            <xs:complexType name="DeleteShipmentItem">
+                <xs:sequence>
+                    <xs:element name="DistributionChannel" type="xs:int"/>
+                    <xs:element name="ShipmentNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="DeleteShipmentItem" nillable="true" type="tns:DeleteShipmentItem"/>
+            <xs:complexType name="ResponseOfDeleteShipmentRequestDeleteShipmentResponsepMtQ0fwN">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <GenericType Name="ResponseOf{0}{1}{#}"
+                                     Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"
+                                     xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                            <GenericParameter Name="DeleteShipmentRequest"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                            <GenericParameter Name="DeleteShipmentResponse"
+                                              Namespace="http://schemas.datacontract.org/2004/07/GService.Manager"/>
+                        </GenericType>
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Request" nillable="true"
+                                type="tns:RequestOfDeleteShipmentRequestHUsxwOXq"/>
+                    <xs:element minOccurs="0" name="ResponseObject" nillable="true" type="tns:DeleteShipmentResponse"/>
+                    <xs:element minOccurs="0" name="Status" type="tns:ResponseStatus"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ResponseOfDeleteShipmentRequestDeleteShipmentResponsepMtQ0fwN" nillable="true"
+                        type="tns:ResponseOfDeleteShipmentRequestDeleteShipmentResponsepMtQ0fwN"/>
+            <xs:complexType name="DeleteShipmentResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ShipmentsNumbers" nillable="true"
+                                type="tns:ArrayOfDeleteShipmentItemResponse"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="DeleteShipmentResponse" nillable="true" type="tns:DeleteShipmentResponse"/>
+            <xs:complexType name="ArrayOfDeleteShipmentItemResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="DeleteShipmentItemResponse" nillable="true"
+                                type="tns:DeleteShipmentItemResponse"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfDeleteShipmentItemResponse" nillable="true"
+                        type="tns:ArrayOfDeleteShipmentItemResponse"/>
+            <xs:complexType name="DeleteShipmentItemResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="IsStorno" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="DeleteShipmentItemResponse" nillable="true" type="tns:DeleteShipmentItemResponse"/>
+        </xs:schema>
+        <xs:schema elementFormDefault="qualified"
+                   targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+            <xs:complexType name="ArrayOfstring">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="IGService_ServiceList_InputMessage">
+        <wsdl:part name="parameters" element="tns:ServiceList"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_ServiceList_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ServiceListResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_AddServiceList_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddServiceList"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_AddServiceList_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddServiceListResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_StatusList_InputMessage">
+        <wsdl:part name="parameters" element="tns:StatusList"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_StatusList_OutputMessage">
+        <wsdl:part name="parameters" element="tns:StatusListResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_WrapList_InputMessage">
+        <wsdl:part name="parameters" element="tns:WrapList"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_WrapList_OutputMessage">
+        <wsdl:part name="parameters" element="tns:WrapListResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_DeliveryRouting_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeliveryRouting"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_DeliveryRouting_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeliveryRoutingResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_ShipmentDetail_InputMessage">
+        <wsdl:part name="parameters" element="tns:ShipmentDetail"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_ShipmentDetail_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ShipmentDetailResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_RouteTable_InputMessage">
+        <wsdl:part name="parameters" element="tns:RouteTable"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_RouteTable_OutputMessage">
+        <wsdl:part name="parameters" element="tns:RouteTableResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_CreatePickUp_InputMessage">
+        <wsdl:part name="parameters" element="tns:CreatePickUp"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_CreatePickUp_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CreatePickUpResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_InsertExport_InputMessage">
+        <wsdl:part name="parameters" element="tns:InsertExport"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_InsertExport_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InsertExportResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_InsertOrder_InputMessage">
+        <wsdl:part name="parameters" element="tns:InsertOrder"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_InsertOrder_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InsertOrderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_AssignRange_InputMessage">
+        <wsdl:part name="parameters" element="tns:AssignRange"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_AssignRange_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AssignRangeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_IsHealthy_InputMessage">
+        <wsdl:part name="parameters" element="tns:IsHealthy"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_IsHealthy_OutputMessage">
+        <wsdl:part name="parameters" element="tns:IsHealthyResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_GetCurrencies_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetCurrencies"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_GetCurrencies_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetCurrenciesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_GetLabel_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetLabel"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_GetLabel_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetLabelResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_ListOfShipments_InputMessage">
+        <wsdl:part name="parameters" element="tns:ListOfShipments"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_ListOfShipments_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ListOfShipmentsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_ShipmentStatus_InputMessage">
+        <wsdl:part name="parameters" element="tns:ShipmentStatus"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_ShipmentStatus_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ShipmentStatusResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_GetPickupList_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetPickupList"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_GetPickupList_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetPickupListResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_DeleteShipment_InputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteShipment"/>
+    </wsdl:message>
+    <wsdl:message name="IGService_DeleteShipment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DeleteShipmentResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="IGService">
+        <wsdl:operation name="ServiceList">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/ServiceList"
+                        message="tns:IGService_ServiceList_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/ServiceListResponse"
+                         message="tns:IGService_ServiceList_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddServiceList">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/AddServiceList"
+                        message="tns:IGService_AddServiceList_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/AddServiceListResponse"
+                         message="tns:IGService_AddServiceList_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="StatusList">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/StatusList"
+                        message="tns:IGService_StatusList_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/StatusListResponse"
+                         message="tns:IGService_StatusList_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="WrapList">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/WrapList"
+                        message="tns:IGService_WrapList_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/WrapListResponse"
+                         message="tns:IGService_WrapList_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeliveryRouting">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/DeliveryRouting"
+                        message="tns:IGService_DeliveryRouting_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/DeliveryRoutingResponse"
+                         message="tns:IGService_DeliveryRouting_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentDetail">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/ShipmentDetail"
+                        message="tns:IGService_ShipmentDetail_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/ShipmentDetailResponse"
+                         message="tns:IGService_ShipmentDetail_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="RouteTable">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/RouteTable"
+                        message="tns:IGService_RouteTable_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/RouteTableResponse"
+                         message="tns:IGService_RouteTable_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CreatePickUp">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/CreatePickUp"
+                        message="tns:IGService_CreatePickUp_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/CreatePickUpResponse"
+                         message="tns:IGService_CreatePickUp_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InsertExport">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/InsertExport"
+                        message="tns:IGService_InsertExport_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/InsertExportResponse"
+                         message="tns:IGService_InsertExport_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InsertOrder">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/InsertOrder"
+                        message="tns:IGService_InsertOrder_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/InsertOrderResponse"
+                         message="tns:IGService_InsertOrder_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AssignRange">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/AssignRange"
+                        message="tns:IGService_AssignRange_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/AssignRangeResponse"
+                         message="tns:IGService_AssignRange_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="IsHealthy">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/IsHealthy"
+                        message="tns:IGService_IsHealthy_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/IsHealthyResponse"
+                         message="tns:IGService_IsHealthy_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetCurrencies">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/GetCurrencies"
+                        message="tns:IGService_GetCurrencies_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/GetCurrenciesResponse"
+                         message="tns:IGService_GetCurrencies_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetLabel">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/GetLabel"
+                        message="tns:IGService_GetLabel_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/GetLabelResponse"
+                         message="tns:IGService_GetLabel_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ListOfShipments">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/ListOfShipments"
+                        message="tns:IGService_ListOfShipments_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/ListOfShipmentsResponse"
+                         message="tns:IGService_ListOfShipments_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentStatus">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/ShipmentStatus"
+                        message="tns:IGService_ShipmentStatus_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/ShipmentStatusResponse"
+                         message="tns:IGService_ShipmentStatus_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetPickupList">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/GetPickupList"
+                        message="tns:IGService_GetPickupList_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/GetPickupListResponse"
+                         message="tns:IGService_GetPickupList_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteShipment">
+            <wsdl:input wsaw:Action="http://tempuri.org/IGService/DeleteShipment"
+                        message="tns:IGService_DeleteShipment_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IGService/DeleteShipmentResponse"
+                         message="tns:IGService_DeleteShipment_OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BasicHttpBinding_IGService" type="tns:IGService">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="ServiceList">
+            <soap:operation soapAction="http://tempuri.org/IGService/ServiceList" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddServiceList">
+            <soap:operation soapAction="http://tempuri.org/IGService/AddServiceList" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="StatusList">
+            <soap:operation soapAction="http://tempuri.org/IGService/StatusList" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WrapList">
+            <soap:operation soapAction="http://tempuri.org/IGService/WrapList" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeliveryRouting">
+            <soap:operation soapAction="http://tempuri.org/IGService/DeliveryRouting" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentDetail">
+            <soap:operation soapAction="http://tempuri.org/IGService/ShipmentDetail" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RouteTable">
+            <soap:operation soapAction="http://tempuri.org/IGService/RouteTable" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CreatePickUp">
+            <soap:operation soapAction="http://tempuri.org/IGService/CreatePickUp" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InsertExport">
+            <soap:operation soapAction="http://tempuri.org/IGService/InsertExport" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InsertOrder">
+            <soap:operation soapAction="http://tempuri.org/IGService/InsertOrder" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AssignRange">
+            <soap:operation soapAction="http://tempuri.org/IGService/AssignRange" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="IsHealthy">
+            <soap:operation soapAction="http://tempuri.org/IGService/IsHealthy" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCurrencies">
+            <soap:operation soapAction="http://tempuri.org/IGService/GetCurrencies" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetLabel">
+            <soap:operation soapAction="http://tempuri.org/IGService/GetLabel" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ListOfShipments">
+            <soap:operation soapAction="http://tempuri.org/IGService/ListOfShipments" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentStatus">
+            <soap:operation soapAction="http://tempuri.org/IGService/ShipmentStatus" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetPickupList">
+            <soap:operation soapAction="http://tempuri.org/IGService/GetPickupList" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteShipment">
+            <soap:operation soapAction="http://tempuri.org/IGService/DeleteShipment" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="GService">
+        <wsdl:port name="BasicHttpBinding_IGService" binding="tns:BasicHttpBinding_IGService">
+            <soap:address location="https://gclient.etlogistik.com/GServiceTest/GService.svc"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

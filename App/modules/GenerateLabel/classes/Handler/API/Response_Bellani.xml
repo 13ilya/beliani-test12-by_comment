@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:cis="http://dhl.de/webservice/cisbase" xmlns:is="http://de.ws.intraship" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soapenv:Header xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"/>
+   <soap:Body>
+      <is:CreateShipmentResponse>
+         <cis:Version>
+            <cis:majorRelease>1</cis:majorRelease>
+            <cis:minorRelease>0</cis:minorRelease>
+            <cis:build>14</cis:build>
+         </cis:Version>
+         <status>
+            <StatusCode>0</StatusCode>
+            <StatusMessage>ok</StatusMessage>
+         </status>
+         <CreationState>
+            <StatusCode>0</StatusCode>
+            <StatusMessage>ok</StatusMessage>
+            <SequenceNumber>1</SequenceNumber>
+            <ShipmentNumber>
+               <cis:shipmentNumber>445527008296</cis:shipmentNumber>
+            </ShipmentNumber>
+            <PieceInformation>
+               <PieceNumber>
+                  <cis:licensePlate>445527008296</cis:licensePlate>
+               </PieceNumber>
+            </PieceInformation>
+            <Labelurl>https://cig.dhl.de/gkvlabel/PRODUCTION/dhl-vls/gw/shpmntws/printShipment?token=JD7HKktuvugIFEkhSvCfbEz4J8Ah0dkcVuw4PzBGRyTtmOjlzj6o0fQUsOeeTNwo5j3x2GbjUPgh%2BhWUMNu%2F7PN16poib77xRl2HHM0q5Oo%3D</Labelurl>
+         </CreationState>
+         <!--<DebugHelp/>-->
+      </is:CreateShipmentResponse>
+   </soap:Body>
+</soap:Envelope>

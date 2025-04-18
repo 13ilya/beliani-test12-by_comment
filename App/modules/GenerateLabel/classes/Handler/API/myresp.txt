@@ -1,0 +1,118 @@
+label\DHLBusinessShipment Object
+(
+    [credentials:label\DHLBusinessShipment:private] => Array
+        (
+            [user] => Webbellani_1
+            [signature] => YuiEyXJM22HIisFQXePZFoWae9fDPa
+            [ekp] => 5000000000
+            [api_user] => bcontrol
+            [api_password] => Widmer2016!
+            [log] => 1
+        )
+
+    [info:label\DHLBusinessShipment:private] => Array
+        (
+            [company_name] => Lagerhaus Beliani
+            [street_name] => Heideweg
+            [street_number] => 46
+            [zip] => 18273
+            [country] => germany
+            [city] => Güstrow
+            [email] => mueller@beliani.ch
+            [phone] => 522222222
+            [contact_person] => Business Control Establishment
+        )
+
+    [client:label\DHLBusinessShipment:private] => SoapClient Object
+        (
+            [location] => https://cig.dhl.de/services/production/soap
+            [_login] => Webbellani_1
+            [_password] => YuiEyXJM22HIisFQXePZFoWae9fDPa
+            [trace] => 1
+            [_soap_version] => 1
+            [sdl] => Resource id #112
+            [__default_headers] => Array
+                (
+                    [0] => SoapHeader Object
+                        (
+                            [namespace] => http://dhl.de/webservice/cisbase
+                            [name] => Authentification
+                            [data] => Array
+                                (
+                                    [user] => bcontrol
+                                    [signature] => Widmer2016!
+                                    [type] => 0
+                                )
+
+                            [mustUnderstand] => 
+                        )
+
+                )
+
+            [__last_request] => <?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://dhl.de/webservice/cisbase" xmlns:ns2="http://de.ws.intraship"><SOAP-ENV:Header><ns1:Authentification><ns1:user>bcontrol</ns1:user><ns1:signature>Widmer2016!</ns1:signature><ns1:type>0</ns1:type></ns1:Authentification></SOAP-ENV:Header><SOAP-ENV:Body><ns2:CreateShipmentDDRequest><ns1:Version><ns1:majorRelease>1</ns1:majorRelease><ns1:minorRelease>0</ns1:minorRelease></ns1:Version><ShipmentOrder><SequenceNumber>1</SequenceNumber><Shipment><ShipmentDetails><ProductCode>BPI</ProductCode><ShipmentDate>2016-04-15</ShipmentDate><ns1:EKP>5000000000</ns1:EKP><Attendance><ns1:partnerID>01</ns1:partnerID></Attendance><ShipmentItem><WeightInKG>5</WeightInKG><LengthInCM>50</LengthInCM><WidthInCM>50</WidthInCM><HeightInCM>50</HeightInCM><PackageType>PK</PackageType></ShipmentItem></ShipmentDetails><Shipper><Company><ns1:Company><ns1:name1>Lagerhaus Beliani</ns1:name1></ns1:Company></Company><Address><ns1:streetName>Heideweg</ns1:streetName><ns1:streetNumber>46</ns1:streetNumber><ns1:Zip><ns1:germany>18273</ns1:germany></ns1:Zip><ns1:city>Güstrow</ns1:city><ns1:Origin><ns1:countryISOCode>DE</ns1:countryISOCode></ns1:Origin></Address><Communication><ns1:phone>522222222</ns1:phone><ns1:email>mueller@beliani.ch</ns1:email><ns1:contactPerson>Business Control Establishment</ns1:contactPerson></Communication></Shipper><Receiver><Company><ns1:Person><ns1:firstname>Justyna</ns1:firstname><ns1:lastname>Jarosiewicz</ns1:lastname></ns1:Person></Company><Address><ns1:streetName>Wieckowskiego</ns1:streetName><ns1:streetNumber>1b/6</ns1:streetNumber><ns1:Zip><ns1:other>71-791</ns1:other></ns1:Zip><ns1:city>Szczecin</ns1:city><ns1:Origin><ns1:countryISOCode>PL</ns1:countryISOCode></ns1:Origin></Address><Communication/></Receiver></Shipment></ShipmentOrder></ns2:CreateShipmentDDRequest></SOAP-ENV:Body></SOAP-ENV:Envelope>
+
+            [httpurl] => Resource id #115
+            [__last_request_headers] => POST /services/production/soap HTTP/1.1
+Host: cig.dhl.de
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.5.33
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "urn:createShipmentDD"
+Content-Length: 1959
+Authorization: Basic V2ViYmVsbGFuaV8xOll1aUV5WEpNMjJISWlzRlFYZVBaRm9XYWU5ZkRQYQ==
+
+
+            [__last_response_headers] => HTTP/1.1 200 OK
+Date: Fri, 15 Apr 2016 06:28:57 GMT
+Server: WebServer
+Strict-Transport-Security: max-age=63072000; includeSubdomains; preload
+Content-Type: text/xml;charset=UTF-8
+Content-Length: 2134
+Connection: close
+
+            [__last_response] => <soap:Envelope xmlns:cis="http://dhl.de/webservice/cisbase" xmlns:is="http://de.ws.intraship" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"/><soap:Body>
+      <is:CreateShipmentResponse>
+         <cis:Version>
+            <cis:majorRelease>1</cis:majorRelease>
+            <cis:minorRelease>0</cis:minorRelease>
+            <cis:build>14</cis:build>
+         </cis:Version>
+         <status xmlns="">
+            <StatusCode>1101</StatusCode>
+            <StatusMessage>Hard validation error occured.</StatusMessage>
+         </status>
+         <CreationState xmlns="">
+            <StatusCode>1101</StatusCode>
+            <StatusMessage>Hard validation error occured.</StatusMessage>
+            <StatusMessage>Die ausgewählte Abrechnungsnummer steht nicht zur Verfügung.</StatusMessage>
+            <StatusMessage>Die ausgewählte Abrechnungsnummer steht nicht zur Verfügung.</StatusMessage>
+            <SequenceNumber>1</SequenceNumber>
+            <Labelurl>https://cig.dhl.de/gkvlabel/PRODUCTION</Labelurl>
+         </CreationState><!--<DebugHelp>
+            <error key="contract.billingNumber.vm.0.i18n"
+                   value="vls.gpm.contract.billingNumber.notavailable"/>
+            <error key="contract.billingNumber.vm.0.message"
+                   value="Die ausgewählte Abrechnungsnummer steht nicht zur Verfügung."/>
+            <error key="contract.billingNumber.vm.0.prop" value="contract.billingNumber"/>
+            <error key="contract.billingNumber.vm.0.state" value="Error"/>
+            <error key="contract.billingNumber.vm.1.i18n"
+                   value="vls.gpm.contract.billingNumber.notavailable"/>
+            <error key="contract.billingNumber.vm.1.message"
+                   value="Die ausgewählte Abrechnungsnummer steht nicht zur Verfügung."/>
+            <error key="contract.billingNumber.vm.1.prop" value="contract.billingNumber"/>
+            <error key="contract.billingNumber.vm.1.state" value="Error"/>
+         </DebugHelp>--></is:CreateShipmentResponse>
+   </soap:Body>
+   
+   
+</soap:Envelope>
+        )
+
+    [errors] => Array
+        (
+            [0] => Hard validation error occured.
+        )
+
+    [sandbox:protected] => 
+)

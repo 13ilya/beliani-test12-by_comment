@@ -1,0 +1,11 @@
+
+intrinsic class mx.events.EventDispatcher
+{
+   static var _fEventDispatcher:mx.events.EventDispatcher;
+   static function _removeEventListener(queue:Object, event:String, handler):Void;
+   public function addEventListener(event:String, handler):Void;
+   public function dispatchEvent(eventObj:Object):Void;
+   public function dispatchQueue(queueObj:Object, eventObj:Object):Void;
+   static function initialize(object:Object):Void;
+   public function removeEventListener(event:String, handler):Void;
+};

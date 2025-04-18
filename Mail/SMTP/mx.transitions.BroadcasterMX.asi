@@ -1,0 +1,9 @@
+
+intrinsic class mx.transitions.BroadcasterMX
+{
+   private var _listeners:Array;
+   public function addListener(o:Object):Number;
+   public function broadcastMessage():Void;
+   static function initialize(o:Object, dontCreateArray:Boolean);
+   public function removeListener(o:Object):Boolean;
+};

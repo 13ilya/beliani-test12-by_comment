@@ -1,0 +1,78 @@
+#@todo add memcached
+#@todo add geoip
+#@todo move out db in separate container
+#@todo make common env file
+version: '2'
+
+services:
+  php:
+    build: ./php
+    ports:
+      - "80:80"
+      - "3307:3307"
+    volumes_from:
+      - data-prologistics
+    environment:
+      - APPLICATION_ENV=docker
+      - REDIS_PORT_6379_TCP_ADDR=db #@todo rename this env
+      - SPHINX_HOST=sphinx
+      - SPHINX_PORT_SQL=9306
+      - SPHINX_ENABLED=1
+      - DEBUG_TOOLBAR_ENABLED=0
+    links:
+      - db
+      - mailcatcher
+
+  db: #@todo rename to redis
+    image: redis
+    ports:
+      - "6379:6379"
+
+  mailcatcher:
+    image: sj26/mailcatcher
+    ports:
+      - "1080:1080"
+
+  node:
+    build: ./node
+    volumes_from:
+      - data-prologistics
+    ports:
+      - "3000:3000"
+      - "3043:3043"
+
+  sphinx:
+    image: leodido/sphinxsearch:2.2.10
+    command: ./bin/searchd.sh
+    volumes:
+      - ./sphinx/sphinx.conf:/usr/local/etc/sphinx.conf
+      - ./sphinx/logs:/var/log/sphinx
+      - ./sphinx/index:/var/idx/sphinx
+      - ./sphinx/dictionary:/var/diz/sphinx
+    ports:
+      - "9306:9306"
+      - "9312:9312"
+    links:
+      - php #for database
+    environment:
+      - DB_HOST=dev.prologistics.info
+      - DB_USER=customer
+      - DB_PORT=3306
+      - SPHINX_PORT_API=9312
+      - SPHINX_PORT_SQL=9306
+    env_file:
+      - ./secret.env
+
+  data-prologistics:
+    image: busybox
+    volumes:
+      # configs
+      - ./php/apache.conf/:/etc/apache2/sites-enabled/
+      - ./php/php.ini:/usr/local/etc/php/php.ini
+      - ./php/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      # virtual hosts
+      - ../../:/var/www/html
+    command: /bin/true
+
+#@todo create cron container
+#sphinx: indexer idx_search_words_history --rotate

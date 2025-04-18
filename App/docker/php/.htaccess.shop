@@ -1,0 +1,1573 @@
+#PATCH
+#Header unset Pragma
+#FileETag None
+#Header unset ETag
+#
+#<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+#	Header set Expires "Thu, 15 Jan 2030 20:00:00 GMT"
+#</FilesMatch>
+#
+#<IfModule mod_deflate.c>
+#	<FilesMatch "\.(js|css)$">
+#		SetOutputFilter DEFLATE
+#	</FilesMatch>
+#</IfModule>
+
+#RewriteCond %{HTTP_HOST} !www\.
+#RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+#END PATCH
+
+RewriteEngine On
+
+#redirect to dev server for static stuff
+#@todo some css/js are absentee in repository, so this is mandatory rules before they are not in
+RewriteCond $1 !^(vendor)
+RewriteRule ^(.*).jpg$ https://www.dev.beliani.net/$1.jpg [NC,L]
+RewriteCond $1 !^(vendor)
+RewriteRule ^(.*).jpeg$ https://www.dev.beliani.net/$1.jpeg [NC,L]
+RewriteRule ^images/(.*)$ https://www.dev.beliani.net/images/$1 [NC,L]
+
+RewriteCond %{QUERY_STRING} code=(.*)
+RewriteRule ^login_gp shop_catalogue.php?login_gp=1&code=%1 [L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.no
+RewriteRule (.*) https://www.beliani.no/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.fi
+RewriteRule (.*) https://www.beliani.fi/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.cz
+RewriteRule (.*) https://www.beliani.cz/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.co.uk
+RewriteRule (.*) https://www.beliani.co.uk/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.de
+RewriteRule (.*) https://www.beliani.de/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.com
+RewriteRule (.*) https://www.beliani.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.fr
+RewriteRule (.*) https://www.beliani.fr/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.at
+RewriteRule (.*) https://www.beliani.at/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.ca
+RewriteRule (.*) https://www.beliani.ca/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.es
+RewriteRule (.*) https://www.beliani.es/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.pl
+RewriteRule (.*) https://www.beliani.pl/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.nl
+RewriteRule (.*) https://www.beliani.nl/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.lu
+RewriteRule (.*) https://www.beliani.lu/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.be
+RewriteRule (.*) https://www.beliani.be/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.it
+RewriteRule (.*) https://www.beliani.it/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.pt
+RewriteRule (.*) https://www.beliani.pt/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.se
+RewriteRule (.*) https://www.beliani.se/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.hu
+RewriteRule (.*) https://www.beliani.hu/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^www.beliani.dk
+RewriteRule (.*) https://www.beliani.dk/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^www.beliani.com
+RewriteCond %{SERVER_PORT} ^443$
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]
+
+DirectoryIndex shop_catalogue.php  index.php
+#ExpiresActive on
+#ExpiresByType "access plus 1 day"
+#ExpiresDefault "access plus 1 day"
+
+#ExpiresActive On
+#ExpiresDefault A0
+#ExpiresByType image/gif A2592000
+#ExpiresByType image/png A2592000
+#ExpiresByType text/css A2592000
+#ExpiresByType text/javascript A2592000
+
+ErrorDocument 404 /content/404/
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType text/x-javascript "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresDefault "access plus 2 days"
+</IfModule>
+## EXPIRES CACHING ##
+
+
+#RewriteCond %{HTTPS} on
+#RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^ichair.ch
+RewriteRule ^(.*)$ https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^guetschlafen.ch
+RewriteRule ^(.*)$ https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/Rattan(\x20)Gartenm(\xC3\xB6)bel/16/Rattan(\x20)Gartenm(\xC3\xB6)bel
+RewriteRule (.*) "/Designer Möbel für kein Geld/244/Rattan Gartenmöbel" [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/Z1035
+RewriteRule (.*) /content/Z103.5/ [R=301,L]
+RewriteCond %{REQUEST_URI} ^/z1035
+RewriteRule (.*) /content/Z103.5/ [R=301,L]
+RewriteCond %{REQUEST_URI} ^/Z103.5
+RewriteRule (.*) /content/Z103.5/ [R=301,L]
+RewriteCond %{REQUEST_URI} ^/z103.5
+RewriteRule (.*) /content/Z103.5/ [R=301,L]
+RewriteCond %{REQUEST_URI} ^/moneysaver
+RewriteRule (.*) /content/content/moneysaver/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/rivella-b$
+RewriteRule (.*) /content/Rivella%20B/ [L]
+RewriteCond %{REQUEST_URI} ^/Rivella-b$
+RewriteRule (.*) /content/Rivella%20B/ [L]
+RewriteCond %{REQUEST_URI} ^/nomenu$
+RewriteRule (.*) /shop_catalogue.php?id=nomenu&nomenu=1 [L]
+
+
+RewriteCond %{REQUEST_URI} ^/Rivella
+RewriteRule (.*) /rivella [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?beliani.com
+RewriteRule ^outdoor-lounge-sets$  http://www.beliani.com/outdoor-furniture-sets/? [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?beliani.com
+RewriteRule ^outdoor-dining-sets$  http://www.beliani.com/patio-dining-sets/? [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?beliani.com
+RewriteRule ^leather-sofas/club-chairs$  http://www.beliani.com/club-chairs/? [R=301,L]
+
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.no
+RewriteRule (.*) https://www.beliani.no/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.fi
+RewriteRule (.*) https://www.beliani.fi/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.cz
+RewriteRule (.*) https://www.beliani.cz/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.lu
+RewriteRule (.*) https://www.beliani.lu/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.se
+RewriteRule (.*) https://www.beliani.se/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.pt
+RewriteRule (.*) https://www.beliani.pt/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.it
+RewriteRule (.*) https://www.beliani.it/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.es
+RewriteRule (.*) https://www.beliani.es/$1 [R=301,L]
+
+#RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+#RewriteCond %{REQUEST_URI} !^/image.php.*
+#RewriteCond %{HTTP_HOST} ^beliani.nl
+#RewriteRule (.*) https://www.beliani.nl/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^www.belani.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^belani.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^www.moebelpreisvergleich.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^moebelpreisvergleich.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^www.rattangartenmoebel.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^rattangartenmoebel.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^www.rattanmoebellounge.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^rattanmoebellounge.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+#RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+#RewriteCond %{REQUEST_URI} !^/image.php.*
+#RewriteCond %{HTTP_HOST} ^beliani.net
+#RewriteRule (.*) https://www.beliani.net/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.co.uk
+RewriteRule (.*) https://www.beliani.co.uk/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.de
+RewriteRule (.*) https://www.beliani.de/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.ch
+RewriteRule (.*) https://www.beliani.ch/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.com
+RewriteRule (.*) https://www.beliani.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.fr
+RewriteRule (.*) https://www.beliani.fr/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.at
+RewriteRule (.*) https://www.beliani.at/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.fr
+RewriteRule (.*) https://www.beliani.fr/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.ca
+RewriteRule (.*) https://www.beliani.ca/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^ca.beliani.com
+RewriteRule (.*) http://www.ca.beliani.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.pl
+RewriteRule (.*) https://www.beliani.pl/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^qualistyle.ch
+RewriteRule (.*) https://www.qualistyle.ch/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^ayohama.com
+RewriteRule (.*) http://www.ayohama.com/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^beliani.ca [NC]
+#RewriteRule ^(.*)$ http://www.beliani.com/$1 [L,R=301]
+
+#RewriteCond %{HTTP_HOST} ^www.beliani.ca [NC]
+#RewriteRule ^(.*)$ http://www.beliani.com/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^ayohama.de
+RewriteRule (.*) http://www.ayohama.de/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.artehome.de
+RewriteRule (.*) https://www.artehome.org/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^artehome.de
+RewriteRule (.*) https://www.artehome.org/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^artehome.org
+RewriteRule (.*) https://www.artehome.org/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^beliani.cn
+RewriteRule (.*) http://www.beliani.cn/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.hu
+RewriteRule (.*) https://www.beliani.hu/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+RewriteCond %{REQUEST_URI} !^/image.php.*
+RewriteCond %{HTTP_HOST} ^beliani.dk
+RewriteRule (.*) https://www.beliani.dk/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} !^www.wikipiki.info
+#RewriteCond %{HTTP_HOST} !^wikipiki.info
+#RewriteCond %{HTTP_HOST} !^www.ayohama.com
+#RewriteCond %{HTTP_HOST} !^ayohama.com
+#RewriteCond %{HTTP_HOST} !^www.beliani.cn
+#RewriteCond %{HTTP_HOST} !^beliani.cn
+#RewriteCond %{HTTP_HOST} !^beliani.es
+#RewriteCond %{REQUEST_URI} !.*\.(jpg|jpeg)
+#RewriteCond %{REQUEST_URI} !^/image.php.*
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#rewritecond %{HTTP_HOST} ^www\.(.*)
+#rewriterule (.*) http://%1/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.beliani.com
+RewriteRule robots.txt robots.com.txt [L]
+
+RewriteCond %{HTTP_HOST} ^www.beliani.ca
+RewriteRule robots.txt robots.ca.txt [L]
+
+RewriteCond %{REQUEST_URI} ^/rivella
+RewriteRule (.*) /content/Rivella/ [L]
+
+RewriteCond %{REQUEST_URI} ^/Rivella
+RewriteRule (.*) /rivella [L]
+
+RewriteCond %{REQUEST_URI} ^/livezilla/.*
+RewriteRule ^(.*)$ $1 [L]
+
+RewriteCond %{REQUEST_URI} ^/short_news/$
+RewriteRule (.*) /short_news.php [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule lang/([^/]*)/(.*)$ shop_catalogue.php?lang=$1&rest=$2 [L]
+RewriteRule currency/([^/]*)/(.*)$ shop_catalogue.php?currency_code=$1&rest=$2 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule skin/([^/]*)/(.*)$ shop_catalogue.php?skin=$1&rest=$2 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule delcart/([^/]*)/$ shop_catalogue.php?delcart=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule cart/([^/]*)/([1-9]*)/?$ shop_catalogue.php?cart_str=$1&cart_quantity=$2 [L]
+RewriteRule cart/([^/]*)/$ shop_catalogue.php?cart_str=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule cart/$ shop_catalogue.php?cart_str= [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule wishes/([^/]*)/$ shop_catalogue.php?wishes=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule unwish/([^/]*)/$ shop_catalogue.php?unwish=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule unwish/$ shop_catalogue.php?unwish= [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule wish/([^/]*)/$ shop_catalogue.php?wish=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule wish/$ shop_catalogue.php?wish= [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule content/([^/]*)/$ shop_catalogue.php?content=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ([^/]*)faq/ shop_catalogue.php?faq= [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule overall_rating/$ shop_catalogue.php?overall_rating [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+
+RewriteRule sitemap.xml App/tmp/sitemap/%{HTTP_HOST}/index.xml [L]
+RewriteRule sitemap_([^/]*).xml App/tmp/sitemap/%{HTTP_HOST}/$1.xml [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule checkout_send_order.php shop_catalogue.php [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule lang/([^/]*)/checkout_register.php(.*) shop_catalogue.php?lang=$1&id=0&checkout=1&renamed=1$2 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule skin/([^/]*)/checkout_register.php(.*) shop_catalogue.php?skin=$1&id=0&checkout=1&renamed=1$2 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule checkout_register.php(.*) shop_catalogue.php?id=0&checkout=1&renamed=1$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule checkout_control_data.php shop_catalogue.php [L]
+
+RewriteRule lang/([^/]*)/show_customer/$ shop_catalogue.php?lang=$1 [L]
+RewriteRule lang/([^/]*)/logout/$ shop_catalogue.php?lang=$1 [L]
+RewriteRule lang/([^/]*)/cabinet/auto/$ shop_catalogue.php?lang=$1 [L]
+RewriteRule lang/([^/]*)/cabinet/$ shop_catalogue.php?lang=$1 [L]
+RewriteRule lang/([^/]*)/register/$ shop_catalogue.php?lang=$1 [L]
+RewriteRule lang/([^/]*)/passreco/$ shop_catalogue.php?lang=$1 [L]
+RewriteRule lang/([^/]*)/clearCart/$ shop_catalogue.php?lang=$1 [L]
+
+RewriteRule skin/([^/]*)/show_customer/$ shop_catalogue.php?skin=$1 [L]
+RewriteRule skin/([^/]*)/logout/$ shop_catalogue.php?skin=$1 [L]
+RewriteRule skin/([^/]*)/cabinet/auto/$ shop_catalogue.php?skin=$1 [L]
+RewriteRule skin/([^/]*)/cabinet/$ shop_catalogue.php?skin=$1 [L]
+RewriteRule skin/([^/]*)/register/$ shop_catalogue.php?skin=$1 [L]
+RewriteRule skin/([^/]*)/passreco/$ shop_catalogue.php?skin=$1 [L]
+RewriteRule skin/([^/]*)/clearCart/$ shop_catalogue.php?skin=$1 [L]
+
+RewriteRule show_customer/$ shop_catalogue.php?show_customer=1 [L]
+RewriteRule logout/$ shop_catalogue.php?logout=1 [L]
+RewriteRule cabinet/auto/$ shop_catalogue.php?cabinet=1&auto=1 [L]
+RewriteRule cabinet/$ shop_catalogue.php?cabinet=1 [L]
+RewriteRule person_orders/$ shop_catalogue.php?person_orders=1 [L]
+RewriteRule register/$ shop_catalogue.php?register=1 [L]
+RewriteRule passreco/$ shop_catalogue.php?passreco=1 [L]
+RewriteRule clearCart/$ shop_catalogue.php?clearCart=1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule delcart/([^/]*)/$ shop_catalogue.php?delcart=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule bonus_description/([^/]*)/$ shop_catalogue.php?bonus_description=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule payment_description/([^/]*)/$ shop_catalogue.php?payment_description=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule search/([^/]*)/$ shop_catalogue.php?search=$1 [B,L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule voucher/([^/]*)/$ shop_catalogue.php?voucher=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule purecont/([^/]*)/$ shop_catalogue.php?purecont=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule news/([^/]*)/$ shop_catalogue.php?news=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule news/$ shop_catalogue.php?news= [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule partner/([^/]*)/$ shop_catalogue.php?partner=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule service_id/([^/]*)/([^/]*)/([^/]*)/$ shop_catalogue.php?parent_parent_service_id=$1&parent_service_id=$2&service_id=$3 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule service_id/([^/]*)/([^/]*)/$ shop_catalogue.php?parent_service_id=$1&service_id=$2 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule service_id/([^/]*)/$ shop_catalogue.php?service_id=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule service/([^/]*)/([^/]*)/([^/]*)/$ shop_catalogue.php?parent_parent_service_id=$1&parent_service_id=$2&service_id=$3 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule service/([^/]*)/([^/]*)/$ shop_catalogue.php?parent_service_id=$1&service_id=$2 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule service/([^/]*)/$ shop_catalogue.php?service_id=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule order/([^/]*)/$ shop_catalogue.php?order=$1 [L]
+
+#RewriteCond %{REQUEST_URI} !^/meubels/.*
+#RewriteCond %{REQUEST_URI} !^/design/.*
+#RewriteCond %{REQUEST_URI} !^/modalbox/.*
+#RewriteCond %{REQUEST_URI} !^/css/.*
+#RewriteCond %{REQUEST_URI} !^/templates/.*
+#RewriteCond %{REQUEST_URI} !^/js/.*
+#RewriteCond %{REQUEST_URI} !^/flash/.*
+#RewriteCond %{REQUEST_URI} !^/video/.*
+#RewriteCond %{REQUEST_URI} !^/images/.*
+#RewriteCond %{REQUEST_URI} !^/imagess/.*
+#RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+#RewriteCond %{REQUEST_URI} !^/getCity.php.*
+#RewriteRule order/([^/]*)/(.*)$ shop_catalogue.php?order=$1$2 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule 0/rating/([^/]*)/key/(.*)$ /rating/$1-$2/ [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule rating/([^/]*)/$ shop_catalogue.php?rating=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule 0/ambassador/([^/]*)/key/(.*)$ /ambassador/$1-$2/ [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ambassador/([^/]*)/$ shop_catalogue.php?ambassador=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule order_wait/([^/]*)/$ shop_catalogue.php?order_wait=$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule order/([^/]*)/print/$ shop_catalogue.php?order=$1&print=1 [L]
+
+############# for sort
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/layout=([^/]*)$ shop_catalogue.php?cat=$1&layout=$2 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/layout=([^/]*)$ shop_catalogue.php?cat=$2&parent_cat=$1&layout=$3 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/layout=([^/]*)$ shop_catalogue.php?cat=$3&parent_cat=$2&parent_parent_cat=$1&layout=$4 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/layout=([^/]*)$ shop_catalogue.php?cat=$4&parent_cat=$3&parent_parent_cat=$2&parent_parent_parent_cat=$1&layout=$5 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/layout=([^/]*)$ shop_catalogue.php?cat=$5&parent_cat=$4&parent_parent_cat=$3&parent_parent_parent_cat=$2&parent_parent_parent_cat=$1&layout=$6 [L]
+
+########### nomenu
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/nomenu$ shop_catalogue.php?cat=$1&nomenu=1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/nomenu$ shop_catalogue.php?cat=$2&parent_cat=$1&nomenu=1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/nomenu$ shop_catalogue.php?cat=$3&parent_cat=$2&parent_parent_cat=$1&nomenu=1 [L]
+
+################ print item
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*).htmlp$ shop_catalogue.php?cat=$1&item=$2&print=1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*).htmlp$ shop_catalogue.php?cat=$2&parent_cat=$1&item=$3&print=1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*).htmlp$ shop_catalogue.php?cat=$3&parent_cat=$2&parent_parent_cat=$1&item=$4&print=1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*).htmlp$ shop_catalogue.php?cat=$4&parent_cat=$3&parent_parent_cat=$2&parent_parent_parent_cat=$1&item=$5&print=1 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*).htmlp$ shop_catalogue.php?cat=$5&parent_cat=$4&parent_parent_cat=$3&parent_parent_parent_cat=$2&parent_parent_parent_parent_cat=$1&item=$6&print=1 [L]
+
+############## show item
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*).html$ shop_catalogue.php?cat=$1&item=$2 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*).html$ shop_catalogue.php?cat=$2&parent_cat=$1&item=$3&%{QUERY_STRING} [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*).html$ shop_catalogue.php?cat=$3&parent_cat=$2&parent_parent_cat=$1&item=$4 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*).html$ shop_catalogue.php?cat=$4&parent_cat=$3&parent_parent_cat=$2&parent_parent_parent_cat=$1&item=$5 [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*).html$ shop_catalogue.php?cat=$5&parent_cat=$4&parent_parent_cat=$3&parent_parent_parent_cat=$2&parent_parent_parent_parent_cat=$1&item=$6 [L]
+
+############## show cat
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteCond %{REQUEST_URI} !^/App/tmp/sitemap/.*
+RewriteRule ^([^/]*)/([^/]*)$ shop_catalogue.php?cat=$1&%{QUERY_STRING} [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteCond %{REQUEST_URI} !^/App/tmp/sitemap/.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)$ shop_catalogue.php?cat=$2&parent_cat=$1&%{QUERY_STRING} [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteCond %{REQUEST_URI} !^/App/tmp/sitemap/.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)$ shop_catalogue.php?cat=$3&parent_cat=$2&parent_parent_cat=$1&%{QUERY_STRING} [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteCond %{REQUEST_URI} !^/App/tmp/sitemap/.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)$ shop_catalogue.php?cat=$4&parent_cat=$3&parent_parent_cat=$2&parent_parent_parent_cat=$1&%{QUERY_STRING} [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteCond %{REQUEST_URI} !^/App/tmp/sitemap/.*
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)$ shop_catalogue.php?cat=$5&parent_cat=$4&parent_parent_cat=$3&parent_parent_parent_cat=$2&parent_parent_parent_parent_cat=$1&%{QUERY_STRING} [L]
+
+RewriteCond %{REQUEST_URI} !^/meubels/.*
+RewriteCond %{REQUEST_URI} !^/tmp/.*
+RewriteCond %{REQUEST_URI} !^/JsHttpRequest/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/facebook-php-sdk-master/.*
+RewriteCond %{REQUEST_URI} !^/modalbox/.*
+RewriteCond %{REQUEST_URI} !^/css/.*
+RewriteCond %{REQUEST_URI} !^/templates/.*
+RewriteCond %{REQUEST_URI} !^/js/.*
+RewriteCond %{REQUEST_URI} !^/flash/.*
+RewriteCond %{REQUEST_URI} !^/video/.*
+RewriteCond %{REQUEST_URI} !^/images/.*
+RewriteCond %{REQUEST_URI} !^/imagess/.*
+RewriteCond %{REQUEST_URI} !^/bookmarks/.*
+RewriteCond %{REQUEST_URI} !^/getCity.php.*
+RewriteRule ([^/]*).html shop_catalogue.php?item=$1 [L]
+
+#SetEnvIfNoCase Host beliani\.net$ require_auth=true
+
+#AuthUserFile /home/beliani.net/public_html/.htpasswd
+#AuthName EnterPassword
+#AuthType Basic
+
+Order Deny,Allow
+Deny from all
+Satisfy any
+#Require valid-user
+Require user b
+Allow from env=!require_auth
+
+

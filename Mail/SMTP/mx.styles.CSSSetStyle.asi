@@ -1,0 +1,20 @@
+import mx.styles.StyleManager;
+import mx.styles.CSSStyleDeclaration;
+
+intrinsic class mx.styles.CSSSetStyle
+{
+   static var CSSStyleDeclarationDependency;
+   public var _color:Number;
+   public function _setStyle(styleProp:String, newValue):Void;
+   public function changeColorStyleInChildren(sheetName:String, colorStyle:String, newValue):Void;
+   public function changeTextStyleInChildren(styleProp:String):Void;
+   static function classConstruct():Boolean;
+   static var classConstructed:Boolean;
+   static function enableRunTimeCSS():Void;
+   public var invalidateStyle:Function;
+   public function notifyStyleChangeInChildren(sheetName:String, styleProp:String, newValue):Void;
+   public var setColor:Function;
+   public function setStyle(styleProp:String, newValue):Void;
+   public var styleName:String;
+   public var stylecache:Object;
+};

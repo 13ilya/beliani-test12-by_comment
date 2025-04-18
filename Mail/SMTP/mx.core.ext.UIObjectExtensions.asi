@@ -1,0 +1,16 @@
+import mx.core.UIObject;
+import mx.styles.CSSStyleDeclaration;
+import mx.skins.SkinElement;
+import mx.events.UIEventDispatcher;
+
+intrinsic class mx.core.ext.UIObjectExtensions
+{
+   static var CSSTextStylesDependency;
+   static function Extensions():Boolean;
+   static var SkinElementDependency;
+   static var UIEventDispatcherDependency;
+   static var UIObjectDependency;
+   static var UIObjectExtended;
+   static function addGeometry(tf:Object, ui:Object):Void;
+   static var bExtended;
+};

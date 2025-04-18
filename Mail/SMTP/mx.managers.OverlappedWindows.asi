@@ -1,0 +1,19 @@
+import mx.managers.SystemManager;
+import mx.core.UIComponent;
+
+intrinsic class mx.managers.OverlappedWindows
+{
+   static var SystemManagerDependency;
+   static function __addEventListener(e:String, o:Object, l:Function):Void;
+   static function __removeEventListener(e:String, o:Object, l:Function):Void;
+   static function activate(f:MovieClip):Void;
+   static function addFocusManager(f:mx.core.UIComponent):Void;
+   static function checkIdle(Void):Void;
+   static function deactivate(f:MovieClip):Void;
+   static function enableOverlappedWindows():Void;
+   static var initialized:Boolean;
+   static function onMouseDown(Void):Void;
+   static function onMouseMove(Void):Void;
+   static function onMouseUp(Void):Void;
+   static function removeFocusManager(f:mx.core.UIComponent):Void;
+};

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:cis="http://dhl.de/webservice/cisbase" xmlns:de="http://de.ws.intraship">
+   <soap:Header>
+      <cis:Authentification>
+          <cis:user>bcontrol</cis:user>  <!--User GKP -->
+         <cis:signature>Widmer2016!</cis:signature> <!--Passwort GKP -->
+         <cis:type>0</cis:type> 
+      </cis:Authentification>
+   </soap:Header>
+   <soap:Body>
+      <de:CreateShipmentDDRequest>  <!-- Nachrichtenname -->
+         <cis:Version>
+            <cis:majorRelease>1</cis:majorRelease> <!-- Fixer Wert -->
+            <cis:minorRelease>0</cis:minorRelease> <!-- Fixer Wert -->
+         </cis:Version>
+         <!--1 oder mehrere Wiederholungen max 50-->
+         <ShipmentOrder>  <!-- Auftrag -->
+            <SequenceNumber>1</SequenceNumber> <!--  erste Sendung -->
+            <Shipment>
+               <ShipmentDetails>
+                  <ProductCode>BPI</ProductCode> <!-- Verfahren 01 (DHL Paket)-->
+                  <ShipmentDate>2016-12-25</ShipmentDate> <!-- AusfÃ¼hrungsdatum mind. Tagesdatum-->
+                  <cis:EKP>7000837587</cis:EKP>  <!-- EKP -->
+                  <Attendance>
+                     <cis:partnerID>13</cis:partnerID> <!-- Teilnahme -->
+                  </Attendance>
+                  <!--1 or mehrere Wiederholungen max 50-->
+                  <ShipmentItem>
+                     <WeightInKG>1.1</WeightInKG> <!-- Gewicht -->
+                     <PackageType>PK</PackageType> <!-- Verpackungsart -->
+                  </ShipmentItem>
+                  <Service>
+                     <ServiceGroupOther>
+                        <COD>
+                           <CODAmount>200</CODAmount> 
+                           <CODCurrency>EUR</CODCurrency> 
+                        </COD>
+                     </ServiceGroupOther>
+                  </Service>
+                  <BankData>
+                     <cis:accountOwner>Versand AG</cis:accountOwner> 
+                     <cis:accountNumber>9876543210</cis:accountNumber> 
+                     <cis:bankCode>87050000</cis:bankCode> 
+                     <cis:bankName>Sparkasse</cis:bankName> 
+                     <cis:iban>DE34870500001234567891</cis:iban> 
+                     <cis:note>Notiz Bank</cis:note> 
+                     <cis:bic>CHEKDE81XXX</cis:bic> 
+                  </BankData>
+               </ShipmentDetails>
+               <Shipper> <!-- Absender -->
+                  <Company> <!-- Absendername -->
+                     <cis:Company>
+                        <cis:name1>DHL Vertrieb GmbH</cis:name1>
+                     </cis:Company>
+                  </Company>
+                  <Address> <!-- Absenderadresse -->
+                     <cis:streetName>Am Flugplatz</cis:streetName>
+                     <cis:streetNumber>14</cis:streetNumber>
+                     <cis:Zip>
+                        <cis:germany>72184</cis:germany>
+                     </cis:Zip>
+                     <cis:city>Eutingen</cis:city>
+                     <cis:Origin>
+                        <cis:countryISOCode>DE</cis:countryISOCode>
+                     </cis:Origin>
+                  </Address>
+                  <Communication> <!-- Kontaktdaten Felder mÃ¼ssen gefÃ¼llt sein -->
+                    <cis:phone>07123987654</cis:phone> 
+                    <cis:email>Vertrieb@dhl.com</cis:email> 
+                    <cis:contactPerson>Herr Mustetr</cis:contactPerson> 
+                  </Communication>
+               </Shipper>
+               <Receiver> <!--  EmpfÃ¤ngerangaben -->
+                  <Company> 
+                     <cis:Person>
+                        <cis:firstname>Empänger</cis:firstname>
+                        <cis:lastname>AG</cis:lastname>
+                     </cis:Person>
+                  </Company>
+                  <Address>
+                     <cis:streetName>Clemens-Holzmeister-Straße</cis:streetName>
+                     <cis:streetNumber>1</cis:streetNumber>
+                     <cis:Zip>
+                        <cis:other>1100</cis:other>
+                     </cis:Zip>
+                     <cis:city>Wien</cis:city>
+                     <cis:Origin>
+                        <cis:countryISOCode>AT</cis:countryISOCode>
+                     </cis:Origin>
+                  </Address>
+                  <Communication>
+                     <cis:phone>07459/921-1234</cis:phone> 
+                     <cis:email>kontakt@dhl.com</cis:email> 
+                     <cis:contactPerson>Kontakt</cis:contactPerson> 
+                  </Communication>
+               </Receiver>
+            </Shipment>
+            <!--Optional:-->
+            <LabelResponseType>URL</LabelResponseType> <!-- URL = Label als PDF, XML = Sendungsinformation -->
+         </ShipmentOrder>
+      </de:CreateShipmentDDRequest>
+   </soap:Body>
+</soap:Envelope>

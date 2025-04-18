@@ -1,0 +1,42 @@
+import mx.events.EventDispatcher;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.TransitionManager
+{
+   static var IDCount:Number;
+   public function TransitionManager(content:MovieClip);
+   public var __get__content:Function;
+   static private var __mixinFED;
+   private var _content:MovieClip;
+   private var _contentAppearance:Object;
+   private var _height:Number;
+   private var _innerBounds:Object;
+   private var _outerBounds:Object;
+   private var _transitions:Object;
+   private var _triggerEvent:String;
+   private var _visualPropList:Object;
+   private var _width:Number;
+   public var addEventListener:Function;
+   public function addTransition(trans:mx.transitions.Transition):mx.transitions.Transition;
+   public var className:String;
+   function set content(c:MovieClip):Void;
+   function get content():MovieClip;
+   function get contentAppearance():Object;
+   public var dispatchEvent:Function;
+   public function findTransition(transParams:Object):mx.transitions.Transition;
+   function get numInTransitions():Number;
+   function get numOutTransitions():Number;
+   function get numTransitions():Number;
+   public function removeAllTransitions():Void;
+   public var removeEventListener:Function;
+   public function removeTransition(trans:mx.transitions.Transition):Boolean;
+   public function restoreContentAppearance():Void;
+   public function saveContentAppearance():Void;
+   static function start(content:MovieClip, transParams:Object):mx.transitions.Transition;
+   public function startTransition(transParams:Object):mx.transitions.Transition;
+   public function toString():String;
+   public function transitionInDone(e:Object):Void;
+   public function transitionOutDone(e:Object):Void;
+   function get transitions():Object;
+   public var type:Object;
+};

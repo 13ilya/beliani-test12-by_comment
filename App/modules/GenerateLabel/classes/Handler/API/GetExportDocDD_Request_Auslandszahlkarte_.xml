@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:cis="http://dhl.de/webservice/cisbase" xmlns:de="http://de.ws.intraship">
+   <soap:Header>
+      <cis:Authentification>
+         <cis:user>bcontrol</cis:user>  <!--User -->
+         <cis:signature>Widmer2016!</cis:signature> <!--Passwort -->
+         <!--Optional:-->
+         <cis:type>0</cis:type>
+      </cis:Authentification>
+   </soap:Header>
+   <soap:Body>
+      <de:GetExportDocDDRequest>
+         <cis:Version>
+            <cis:majorRelease>1</cis:majorRelease>
+            <cis:minorRelease>0</cis:minorRelease>
+            <!--Optional:-->
+         </cis:Version>
+         <!--1 or more repetitions:-->
+         <ShipmentNumber>
+            <!--You have a CHOICE of the next 4 items at this level-->
+            <cis:shipmentNumber>445527104210</cis:shipmentNumber>
+         </ShipmentNumber>
+         <!--Optional:-->
+         <DocType>PDF</DocType>
+      </de:GetExportDocDDRequest>
+   </soap:Body>
+</soap:Envelope>

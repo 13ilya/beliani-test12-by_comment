@@ -1,0 +1,1 @@
+In this file situated logs about scripts/functions/code that looks like not used but really used.

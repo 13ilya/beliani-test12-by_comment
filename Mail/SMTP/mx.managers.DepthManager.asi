@@ -1,0 +1,38 @@
+import mx.core.UIObject;
+
+intrinsic class mx.managers.DepthManager
+{
+   public function DepthManager();
+   static var __depthManager:mx.managers.DepthManager;
+   public var _childCounter:Number;
+   public var _parent:MovieClip;
+   public var _topmost:Boolean;
+   public function buildDepthTable(Void):Array;
+   public function createChildAtDepth(linkageName:String, depthFlag:Number, initObj:Object):MovieClip;
+   public function createClassChildAtDepth(className:Function, depthFlag:Number, initObj:Object):mx.core.UIObject;
+   public var createClassObject:Function;
+   static function createClassObjectAtDepth(className:Object, depthSpace:Number, initObj:Object):mx.core.UIObject;
+   public var createObject:Function;
+   static function createObjectAtDepth(linkageName:String, depthSpace:Number, initObj:Object):MovieClip;
+   public function findNextAvailableDepth(targetDepth:Number, depthTable:Array, direction:String):Number;
+   public var getDepth:Function;
+   public function getDepthByFlag(depthFlag:Number, depthTable:Array):Number;
+   static var highestDepth:Number;
+   static private var holder:MovieClip;
+   static var kBottom:Number;
+   static var kCursor:Number;
+   static var kNotopmost:Number;
+   static var kTooltip:Number;
+   static var kTop:Number;
+   static var kTopmost:Number;
+   static var lowestDepth:Number;
+   static var numberOfAuthortimeLayers:Number;
+   static var reservedDepth:Number;
+   public function setDepthAbove(targetInstance:MovieClip):Void;
+   public function setDepthBelow(targetInstance:MovieClip):Void;
+   public function setDepthTo(depthFlag:Number):Void;
+   public function shuffleDepths(subject:MovieClip, targetDepth:Number, depthTable:Array, direction:String):Void;
+   static function sortFunction(a:MovieClip, b:MovieClip):Number;
+   public var swapDepths:Function;
+   static function test(depth:Number):Boolean;
+};

@@ -1,0 +1,25 @@
+import mx.core.UIObject;
+import mx.core.View;
+import mx.events.UIEventDispatcher;
+
+intrinsic class mx.core.ExternalContent
+{
+   static var ViewDependency;
+   public function checkLoadProgress():Void;
+   public var childLoaded:Function;
+   static function classConstruct():Boolean;
+   static var classConstructed:Boolean;
+   public function contentLoaded():Void;
+   public function convertToUIObject(obj:MovieClip):Void;
+   public var createObject:Function;
+   public var dispatchEvent:Function;
+   public var doLater:Function;
+   static function enableExternalContent():Void;
+   public function loadExternal(url:String, placeholderClassName:String, instanceName:String, depth:Number, initProps:Object):MovieClip;
+   public var loadList:Object;
+   public var loadedList:Object;
+   public var numChildren:Number;
+   public var prepList:Object;
+   public function prepareToLoadMovie(obj:MovieClip):Void;
+   public function waitForUnload():Void;
+};

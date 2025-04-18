@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>React Prologistics</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+<body>
+    <table width="100%">
+<tbody><tr>
+
+<td style="vertical-align:top; width:160px" class="leftSideMenu" nowrap="" bgcolor="#FFFFAA">
+<a href="/logout.php"><b>Logout Neffes</b></a><br>
+<!--<b><a href="/http://app.ess.ch/tudu/secure/showTodos.action" target="_new" >Todo list</a></b><br>-->
+<b><a href="/loginchpw.php">Change PW</a></b><br>
+<a href="/acl_php.php">Access control settings</a><br>
+<a href="/role.php" style="pointer-events: none;cursor: default;color:gray;">Access control plans</a><br>
+<a href="/log_triggers.php" style="pointer-events: none;cursor: default;color:gray;">Log settings</a><br>
+<a href="/email_templates.php">Email templates</a><br>
+<a href="/gallerylib.php" style="pointer-events: none;cursor: default;color:gray;">Image library</a><br>
+<a href="/users.php">Users accounts</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/user.php">New user</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/users.php?deleted=1">Inactive users</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/statistics.php" style="pointer-events: none;cursor: default;color:gray;">Statistics</a><br>
+
+</script>
+
+<input id="warehouses4emp" value="" type="hidden">
+    <div id="timesheet_div">Timestamp: <font color="red">OUT</font></div>
+    <input id="timesheet_button" value="LOG IN" style="color:green" disabled="" type="button">
+    <br>
+
+Company <select id="company_id">
+
+</select><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/timestamp_manual.php">Manual time stamps</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/timestamp_settings.php">Time stamp setting</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/timestamp_filter.php">Time stamp filter</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/emp_vacation_sickness.php">Vacation and Sickness</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/emp_absence.php" style="pointer-events: none;cursor: default;color:gray;">Absences reports</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/companies.php">Time stamp company</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/holi_plans.php">Public holidays plans</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/work_plan.php">Working plans</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/limiter.php" style="pointer-events: none;cursor: default;color:gray;">Limiter settings</a><br>
+<a href="/sellers.php">Sellers accounts</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/sellerinfo.php">New seller</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/seller_sources.php">Source seller</a><br>
+<a href="/purge.php" style="pointer-events: none;cursor: default;color:gray;">Purge</a><br>
+<a href="/configure.php">Configure</a><br>
+<a href="/slaves.php" style="pointer-events: none;cursor: default;color:gray;">Configure slave servers</a><br>
+<a href="/articles.php">Articles</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/article.php">New article</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/article_settings.php" style="pointer-events: none;cursor: default;color:gray;">Article settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/stock_values.php">Stock value</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/export_paid_articles.php">Export paid articles</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/articles_cons.php">Consolidate articles</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/article_cons.php">New consolidate</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/articles.php?dead=1">Article EOL</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/articles_kpi.php" style="pointer-events: none;cursor: default;color:gray;">Articles KPI</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/articles_kpi_log.php" style="pointer-events: none;cursor: default;color:gray;">Articles KPI Log</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/articles_tr.php">Article translation</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/avgstock_log.php">Article average stock log</a><br>
+<a href="/sa_inventory.php">Inventory SA</a><br>
+<a href="/stock_takes.php">Inventory Stock Take</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/stock_take.php">New Stock Take</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/avgstock_log.php">Inventory Stock Log</a><br>
+<a href="/equip.php">Office equipment</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/eq_settings.php">Office equipment settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/fork_lift.php">Fork lift</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/soft.php">Software settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/imap.php">IMAP settings</a><br>
+<a href="/produce_labels.php">Produce labels</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/produce_label.php?id=0" style="pointer-events: none;cursor: default;color:gray;">New label</a><br>
+<a href="/offers.php">Offers</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/offer.php">New offer</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/offers.php?old=1">Old offers</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/offers.php?hidden=1">Hidden offers</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/offer_details.php">Offer details</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/base_groups.php">Basegroups</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/base_groups.php?deleted=1">Inactive Basegroups</a><br>
+<a href="/warehouses.php">Warehouses</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ware_statistics.php" style="pointer-events: none;cursor: default;color:gray;">Warehouse Statistics</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ware_locs.php">Warehouse Location</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/loading_area.php" style="pointer-events: none;cursor: default;color:gray;">Loading area</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ship2ware.php" style="pointer-events: none;cursor: default;color:gray;">Warehouse distance setting</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/warehouse.php">New warehouse</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/understock.php" style="pointer-events: none;cursor: default;color:gray;">Understock page</a><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ware2ware.php">Warehouse-to-warehouse</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ware2ware_list.php">WWO list</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ware2ware_list.php?inactive=1">Inactive WWO list</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ware2ware_order.php">New WWO</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/wwo_settings.php">WWO settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/wwo_forecast.php" style="pointer-events: none;cursor: default;color:gray;">WWO Forecast</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ats_list.php">ATS list</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ats.php">New ATS</a><br>
+<a href="/accounts.php">Accounts</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/account.php">New account</a><br>
+<a href="/methods.php">Shipping methods</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/method.php">New shipping method</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tn_packet.php" style="pointer-events: none;cursor: default;color:gray;">Parcel type</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/parcel_barcodes_manual.php" style="pointer-events: none;cursor: default;color:gray;">Parcel type barcode creator</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/parcel_barcodes.php" style="pointer-events: none;cursor: default;color:gray;">Parcel type barcodes</a><br>
+
+<a href="/shipping_plans.php">Shipping plans</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shipping_plan.php">New shipping plan</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shipping_plans.php?deleted=1">Shipping plans EOL</a><br>
+<a href="/shipping_costs.php">Shipping prices</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shipping_cost.php">New shipping price list</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shipping_costs.php?inactive=1">Inactive Shipping prices</a><br>
+<a href="/search.php?express"><font color="#009900"><b>Auftrag search express</b></font></a><br>
+<a href="/search.php"><b>Auftrag search</b></a><br>
+<a href="/barcodes.php" style="pointer-events: none;cursor: default;color:gray;"><b>Barcodes search</b></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/barcode_settings.php" style="pointer-events: none;cursor: default;color:gray;">Barcodes settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/barcodes_manual.php" style="pointer-events: none;cursor: default;color:gray;">Barcode creator</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/search.php?what=no_barcodes">No barcode list</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/barcode_inventories.php">Barcode inventory</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/barcode_statistics.php">Barcode statistics</a><br>
+<a href="/search_cfg.php">Search configuration</a><br>
+<a href="/rating.php">Rating</a><br>
+<a href="/vat.php">VAT</a><br>
+<a href="/vat_state.php">States</a><br>
+<a href="/eco_settings.php">Eco-Taxe</a><br>
+<a href="/plz2city.php">Zip to city</a><br>
+<a href="/calcs.php">Calculations</a><br>
+<a href="/calcs_offers.php">Offers Calculations</a><br>
+<a href="/export-last-orders.php" style="pointer-events: none;cursor: default;color:gray;">Export last orders</a><br>
+<a href="/export.php">Export payments</a><br>
+<a href="/export_pdf.php">Export invoices</a><br>
+<a href="/export_invoice.php">Export invoices (CSV)</a><br>
+<a href="/export_pdf.php?pack=1">Export packing list</a><br>
+<a href="/tn_monitor.php" style="pointer-events: none;cursor: default;color:gray;">Monitor tracking numbers</a><br>
+<a href="/export_rma.php">Export Ticket cases</a><br>
+<a href="/export_rma_offer.php">Export Ticket cases (offer based)</a><br>
+<a href="/rma_pics.php" style="pointer-events: none;cursor: default;color:gray;">Ticket picture search</a><br>
+<a href="/rma_sell_chanels.php" style="pointer-events: none;cursor: default;color:gray;">Ticket Sales Channels</a><br>
+<a href="/fix_acc.php">Fix account numbers</a><br>
+<br>
+<a href="/shipping_search.php?what=shipping_username">My Shipping orders</a><br>
+<!--&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shipping_search.php?what=shipping_username&shipping_mode=1" >Shipping orders</a><br>-->
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/picking_list.php" style="pointer-events: none;cursor: default;color:gray;">Picking list</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/total_cycle_time.php" style="pointer-events: none;cursor: default;color:gray;">Total cycle time</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/routes.php">Routes</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/routes.php?deleted=1">Inactive Routes</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/search.php?what=driver_tasks">Driver tasks</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/route_task.php">New task</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shipping_order_settings.php">Shipping order settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/cars.php">Car settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/calendar.php">Cars calendar</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/route_stat.php">Routes statistics</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/driver_search.php">Driver search</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/sms_settings.php" style="pointer-events: none;cursor: default;color:gray;">SMS settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/truck_route.php">Truck route planning</a><br>
+<br>
+<a href="/articles.php?shipping_username=">My Inventory</a><br>
+<a href="/search.php?what=ins_responsible_username">My Insurance cases</a><br>
+<br>
+<a href="/packed_scan.php">Parcel packed scan</a><br>
+<a href="/parcel_shipping_list.php">Parcel shipping list</a><br>
+<a href="/shipping_refund_list.php" style="pointer-events: none;cursor: default;color:gray;">Make shipping refund list</a><br>
+<a href="/orphaned.php?active=1">Active auctions</a><br>
+<a href="/orphaned.php">Unassigned auctions</a><br>
+<a href="/custominvoice.php"><font color="brown"><b>New invoice</b></font></a><br>
+<a href="/massinvoice.php">Mass invoice</a><br>
+<a href="/marketing_camps.php" style="pointer-events: none;cursor: default;color:gray;">Marketing Campaigns</a><br>
+<a href="/customers.php">Send newsletter</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/news_emails.php">Newsletter templates</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/spam_plan.php">Newsletter Planning</a><br>
+<!--&nbsp;&nbsp;&nbsp;&nbsp;<a href="/customer_pars.php" >Newsletter settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/customer_par.php" >New newsletter settings</a><br>-->
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/customer.php?id=0">New Customer</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shop_promo_partners.php?shop_id=1">Newsletter Partners</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/newsmail_settings.php">Newsletter Settings</a><br>
+<a href="/proxies.php">Proxies</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/proxy_settings.php">Proxy settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/autoread.php">Read auctions</a><br>
+<a href="/customer_search.php">Customer/Journalist search</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/jour_topics.php">Journalist topics</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/customer_type_set.php">Import bounce mails</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/source_list.php" style="pointer-events: none;cursor: default;color:gray;">Source list</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/customer_upload.php">Import mail adresses</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="//customer_stat.php?filter[src][shop]=shop&amp;filter[src][auction]=auction&amp;filter[lang]=&amp;filter[shop_id]=&amp;filter[username]=&amp;filter[date_from]=&amp;filter[date_to]=&amp;filter[days]=99999&amp;filter[group]=shop&amp;filterbtn=Filter">Customer statistics</a><br>
+<a href="/shop_unfinished.php">Unfinished orders tool</a><br>
+<a href="/firm_search.php" style="pointer-events: none;cursor: default;color:gray;">Firm search</a><br>
+<a href="/sa_price.php">SA Price Calculation</a><br>
+<a href="/saved_details.php">SA Details</a><br>
+<a href="/saved_available.php">SA availability settings</a><br>
+<a href="/saved.php?channel=0"><font color="brown"><b>Saved auctions: ALL</b></font></a><br>
+<a href="/saved.php?channel=1"><font color="brown"><b>Saved auctions: eBay</b></font></a><br>
+<a href="/saved.php?channel=2"><font color="brown"><b>Saved auctions: Ricardo</b></font></a><br>
+<a href="/saved.php?channel=3"><font color="brown"><b>Saved auctions: Amazon</b></font></a><br>
+<a href="/saved.php?channel=4"><font color="brown"><b>Saved auctions: Shop</b></font></a><br>
+<a href="/saved.php?channel=5"><font color="brown"><b>Saved auctions: Allegro</b></font></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/sa_settings.php" style="pointer-events: none;cursor: default;color:gray;">SA settings</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/newauction.php">New saved auction</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/saved.php?channel=1&amp;old=1">Old Saved auctions: eBay</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/saved.php?channel=2&amp;old=1">Old Saved auctions: Ricardo</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/saved.php?channel=3&amp;old=1">Old Saved auctions: Amazon</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/saved.php?channel=4&amp;old=1">Old Saved auctions: Shop</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/saved.php?channel=5&amp;old=1">Old Saved auctions: Allegro</a><br>
+<a href="/sa_csv_list.php">CSV configuration tool</a><br>
+<a href="/sa_custom_pars.php">SA Custom parameters</a><br>
+<a href="/sa_manda_settings.php" style="pointer-events: none;cursor: default;color:gray;">Field-checking of SA pages</a><br>
+<a href="/sa_colors.php">Colors</a><br>
+<a href="/sa_materials.php">Materials</a><br>
+<a href="/suspend.php" style="pointer-events: none;cursor: default;color:gray;">Suspend dates</a><br>
+<a href="/translate.php">Translation</a><br>
+<a href="/ebay_systems.php">eBay system API settings</a><br>
+<a href="/payment_methods.php">Payment methods</a><br>
+<a href="/payment_methods_stat.php">Payment methods statistics</a><br>
+<a href="/countries.php">Countries</a><br>
+<a href="/country_settings_values.php?name=site_id" style="pointer-events: none;cursor: default;color:gray;">Country site settings</a><br>
+<a href="/zip_ranges.php">Country ZIP ranges</a><br>
+<a href="/fbackup.php">Full system backup settings</a><br>
+<a href="/stop_settings.php">Emergency Stop settings</a><br>
+<br>
+<a href="/employees.php">Employees list</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/emp_settings.php">Employee settings</a><br>
+<a href="/emp_message.php">Employee information system</a><br>
+<a href="/emp_tel_cost.php">Enter telephone costs</a><br>
+<a href="/emp_tel_cost_stat.php">Show telephone costs</a><br>
+<a href="/penalty.php">Employees penalties</a><br>
+<br>
+<a href="/op_search.php">Order search</a><br>
+<a href="/op_auto.php?bysupplier=1&amp;supplier=-1">Automatic order sheet</a><br>
+<a href="/opt_list.php">Order planing tool</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/opt_list.php?inactive=1">Inactive Order planing tool </a><br>
+<a href="/op_sheet.php?mode=current">Order process sheet</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/op_order.php">New order</a><br>
+<a href="/op_companies.php">Assign articles to supplier</a><br>
+<a href="/op_suppliers.php">Suppliers</a><br>
+<a href="/qc_search.php">QC numbers</a><br>
+<!--&nbsp;&nbsp;&nbsp;&nbsp;<a href="/op_suppliers.php?old=1" >Old suppliers</a><br>-->
+<a href="/packing_docs.php">Packing instructions</a><br>
+<a href="/op_shcompanies.php">Shipping companies</a><br>
+<a href="/op_categories.php">Assign articles to category</a><br>
+<a href="/op_settings.php">Order settings</a><br>
+<a href="/custom_numbers.php">Custom numbers</a><br>
+<a href="/classifier_tree.php" style="pointer-events: none;cursor: default;color:gray;">Classifier</a><br>
+<br>
+<a href="/truck_route.php">Truck route planning</a><br>
+<a href="/truck_route_settings.php" style="pointer-events: none;cursor: default;color:gray;">Truck route settings</a><br>
+<br>
+<a href="/merchants.php">Merchants</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/merchant.php">New merchant</a><br>
+<br>
+<a href="/shops.php">Shops</a><br>
+<a href="/shop_vouchers.php?shop_id=1">Shop vouchers</a><br>
+<!--&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shop_vouchers.php?shop_id=1&inactive=1" >Inactive vouchers</a><br>-->
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shop_vouchers.php?unpaid=1">Unpaid vouchers</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shop_voucher_payment.php?shop_id=1" style="pointer-events: none;cursor: default;color:gray;">Search voucher payment</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shop_voucher_partners.php" style="pointer-events: none;cursor: default;color:gray;">Shop voucher partners</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shop_conditions.php">Shop voucher conditions</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/shop_promo_templates.php">Shop voucher templates</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/promo_plan.php">Automatic voucher</a><br>
+<a href="/shop_contests_list.php">Shop contests</a><br>
+<a href="/shop_bonuses.php?country_code=CH">Shop bonus records</a><br>
+<a href="/shop_bonus_groups.php?country_code=CH">Shop bonus groups</a><br>
+<a href="/shop_bonus_stat.php">Shop bonus statistic</a><br>
+<a href="/shop_sa_stats.php">Shop articles statistics</a><br>
+<a href="/shop_cats.php?shop_id=1">Shop catalogue</a><br>
+<a href="/sa_similar.php">Shop similar articles</a><br>
+<a href="/shop_par_names.php?shop_id=1">Shop parameters</a><br>
+<a href="/shop_sorting.php">Shop sorting</a><br>
+<a href="/shop_metas.php?shop_id=1">Shop meta tags</a><br>
+<a href="/shop_banners.php?shop_id=1">Shop banners</a><br>
+<a href="/shop_logo_blocks.php?shop_id=1">Shop logo blocks</a><br>
+<a href="/shop_logos.php?shop_id=1">Shop logos</a><br>
+<a href="/shop_icons.php?shop_id=1">Shop icons</a><br>
+<a href="/shop_front_overlays.php?shop_id=1">Shop frontpage overlays</a><br>
+<a href="/shop_disco_banners.php?shop_id=1">Shop article discount banner</a><br>
+<a href="/shop_contents.php?shop_id=1">Shop content</a><br>
+<a href="/shop_news_list.php?shop_id=1">Shop news</a><br>
+<a href="/shop_services.php?shop_id=1">Shop services</a><br>
+<a href="/shop_partners.php?shop_id=1">Shop partner sites</a><br>
+<a href="/shop_ratings.php">Shop ratings</a><br>
+<a href="/shop_ratings.php?aggr=1">Shop ratings statistic</a><br>
+<a href="/shop_ratings_custom.php">Shop manual rating</a><br>
+<a href="/shop_view_counter.php">Shop view counter</a><br>
+<a href="/translate.php?table=translate_shop">Shop Translation</a><br>
+<a href="/shop_questions.php">Shop questions</a><br>
+<a href="/shop_question_kpi.php">Shop questions KPI</a><br>
+<a href="/shop_search_log.php">Shop Search</a><br>
+<a href="/shop_search_defs.php?shop_id=1">Shop search definitions</a><br>
+<a href="/shop_search_ranking.php">Shop Search Ranking</a><br>
+<a href="/shop_follows.php?shop_id=1" style="pointer-events: none;cursor: default;color:gray;">Shop Follow Us On</a><br>
+<a href="/shop_seo.php?shop_id=1">Shop SEO</a><br>
+<a href="/crafts.php">Shop Crafts</a><br>
+<a href="/redirects.php">Shop URL redirect</a><br>
+<a href="/shop_ambass.php">Shop Ambassadors</a><br>
+<a href="/shop_faq_list.php?shop_id=1" style="pointer-events: none;cursor: default;color:gray;">Shop FAQ</a><br>
+<a href="/shop_live_block_city.php" style="pointer-events: none;cursor: default;color:gray;">Shop Live Block City</a><br>
+<br>
+<a href="/mobile.php">Warehouse Mobile</a><br>
+<a href="/mobile_devs.php" style="pointer-events: none;cursor: default;color:gray;">Mobile devices</a><br>
+<a href="/mobile_dev_settings.php" style="pointer-events: none;cursor: default;color:gray;">Mobile Settings</a><br>
+<a href="/mobile_stats.php" style="pointer-events: none;cursor: default;color:gray;">Mobile statistics</a><br>
+<a href="/loading_list.php">Loading List </a><br>
+
+<td class="rightSideBlock" valign="top">
+    <table style="max-width: 1131px;" id="fulltable" border="0">
+        <tbody><tr>
+            <td align="center">
+                <h1 align="center"></h1>
+                <h2 align="center"></h2>
+                <h3 align="center"></h3>
+            </td>
+        </tr>
+    </tbody></table>
+    <table width="100%" cellpadding="0" cellspacing="1">
+        <tbody><tr>
+            <td>
+                <div id="errortext_div" style="display:none">
+                    <b></b>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+
+<script>
+    $(document).ready(function(){
+        var content=$('.leftSideMenu').html();
+        $('.leftSideMenu').html('<div class="leftMenuInner">'+content+'</div>');
+        var width = Number($('.leftSideMenu').width());
+        $('.leftSideMenu').before('<div class="showHideBtn" style="left:'+(width-6)+'px"></div>');
+        var height = Number($('.leftSideMenu').height());
+
+        $('.showHideBtn').on('click',function(){
+
+
+
+            if(!$(this).hasClass('show')){
+                $('.leftMenuInner').addClass('flyingClass');
+                $(this).css({opacity:0}).addClass('show');
+                $('.leftSideMenu').animate({width:'0%'},"slow",function(){$('.leftSideMenu').hide();$('.showHideBtn').css({opacity:0.5});});
+                $('.leftMenuInner').animate({left:'-90%',opacity:0},"slow",function(){$('.leftMenuInner').hide()});
+            }
+            else{
+
+                $(this).css({opacity:0,left:(width-6)+'px'}).removeClass('show');
+                $('.leftSideMenu').fadeIn('slow');
+                $('.leftSideMenu').animate({width:(width)+'px'},"slow",function(){$('.showHideBtn').show();});
+                $('.leftMenuInner').fadeIn('slow');
+                $('.leftMenuInner').animate({left:'0%',opacity:1},"slow",function(){$('.leftMenuInner').removeClass('flyingClass');$('.showHideBtn').css({opacity:0.5});});
+
+            }
+        });
+    });
+</script>
+<style>
+.flyingClass{
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+.leftSideMenu{
+    position:relative;
+    padding: 10px;
+    background-color: white;
+    border-right: 1px solid rgb(221, 221, 221);
+    position:relative;
+    width:14%!important;
+    }
+
+.showHideBtn.show{
+    border-color: transparent transparent transparent rgb(53, 204, 31);
+    left:0px!important;
+}
+.showHideBtn{
+    display: block !important;
+    position: absolute;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    opacity: 0.5;
+    text-align: center;
+    border-width: 14px;
+    border-color: transparent rgb(53, 204, 31) transparent transparent;
+    cursor: pointer;
+    z-index:100;
+}
+.showHideBtn:hover{
+    opacity:1;
+    color:red;
+}
+    table,td,tr,td,th{font-size:inherit;}
+</style>
+<div id="app"></div>
+<script src="http://localhost:3001/main_logs.js"></script>
+</td>
+</tr>
+</tbody></table>
+
+</body>
+</html>

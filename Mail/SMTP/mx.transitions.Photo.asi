@@ -1,0 +1,13 @@
+import mx.transitions.TransitionManager;
+import mx.transitions.Transition;
+
+intrinsic class mx.transitions.Photo extends mx.transitions.Transition
+{
+   public function Photo(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager);
+   private var _alphaFinal:Number;
+   private var _colorControl:Color;
+   private function _render(p:Number):Void;
+   public var className:String;
+   public function init(content:MovieClip, transParams:Object, manager:mx.transitions.TransitionManager):Void;
+   public var type:Object;
+};

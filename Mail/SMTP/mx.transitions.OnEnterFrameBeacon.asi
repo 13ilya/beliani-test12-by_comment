@@ -1,0 +1,6 @@
+import mx.transitions.BroadcasterMX;
+
+intrinsic class mx.transitions.OnEnterFrameBeacon
+{
+   static function init();
+};

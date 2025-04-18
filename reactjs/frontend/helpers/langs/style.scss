@@ -1,0 +1,23 @@
+.b-dropdown-langs{
+    position: absolute;
+    top: 80px;
+    right: 40px;
+}
+.multiselect-container{
+    li{
+        position: relative;
+        padding: 5px 5px 5px 20px;
+        text-transform: capitalize;
+        cursor:pointer;
+        &.active{
+            background: #337ab7;
+            color: #fff;
+        }
+        .mainLang{
+            position: absolute;
+            right: 10px;
+            top: 4px;
+            cursor:pointer;
+        }
+    }
+}
